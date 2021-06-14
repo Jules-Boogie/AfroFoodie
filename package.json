@@ -1,0 +1,24 @@
+{
+  "name": "AFroFoodie",
+  "version": "1.0.0",
+  "description": "A web application that stores recipes.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jules-Boogie/AfroFoodie.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jules-Boogie/AfroFoodie/issues"
+  },
+  "homepage": "https://github.com/Jules-Boogie/AfroFoodie#readme",
+  "devDependencies": {
+    "parcel": "^2.0.0-beta.2"
+  }
+}

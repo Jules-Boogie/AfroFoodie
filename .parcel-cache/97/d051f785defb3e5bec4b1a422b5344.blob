@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="0152b3caf5f1ca049fcbef253371c05c" rel="stylesheet">
+  
+    
+    <link href="ec9ea45c60655bb19c4f2c8c817e49bc" rel="stylesheet">
+    <link rel="stylesheet" href="df53f3ca9eb9ee15113a2f9de6dd5775">
+    <script defer="" src="9943fe1fe9c744d4466927db191cbbfc" data-auto-a11y="true"></script>
+    <script defer="" src="5af5013967da8fc74e52920be53227dc"></script>
+
+    <title>AfroFoodie// Search for Afro Inspired recipes</title>
+  </head>
+
+  <body>
+
+      <header class="header flex justify-between items-center">
+        <div class="relative h-32">
+          <a href="33edaf6d12d13fd3397234e18ac8a5e2">
+            <img class="h-32" src="c29ad49a61bb920da6c78f24afe2dc14" alt="Logo">
+          </a>
+        </div>
+     
+        <div class="border relative h-10 rounded-full py-2 px-6 hover:shadow-lg">
+          <input type="text" placeholder="Search Recipes">
+          <button id="search__btn" class=" hover:bg-red-600 focus:outline-none btn  ml-8 w-12 h-full rounded-full text-black">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+        <nav class="nav">
+          <ul class="nav__list flex ">
+            <div class="relative h-10 rounded-full py-2 px-4 hover:shadow-lg">
+              <button class=" focus:outline-none text-md font-semibold text-shadow">
+              Add recipe
+              </button>
+            </div>
+            <div class="border relative h-10 rounded-full py-2 px-4 hover:shadow-lg ml-8">
+              <button class=" focus:outline-none  text-md font-semibold text-shadow">
+                <i class="fas fa-bars"></i>
+                My Recipes
+              </button>
+              <div class="bookmarks">
+               <!-- the list component I used for VU -->
+              </div>
+            </div>
+          </ul>
+        </nav>
+      </header>
+      <div class="bodyody h-full w-full text-black"> 
+      <div id="saved-recipes" class="px-12">
+        <h2 class="text-2xl font-bold"> My Saved Recipes </h2>
+        <div class="bg-image w-full  flex justify-around  items-center gap-3 py-5">
+          <div class="backdrop w-10/12 md:w-1/4 hover:bg-transparent bg-white bg-opacity-10 rounded p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Beyonce</h3>
+              <button id="search__btn" class="focus:outline-none btn  ml-8 w-12 h-full rounded-full text-black">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class=" text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span> 
+               <span> Country Name </span> 
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
+              <div class="flex items-center">
+                <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src="43d907540c27c767667efa3c9b0ea50a">
+                <h3 class="ml-2 hover:underline cursor-pointer text-sm font-semibold text-shadow">Yewande</h3>
+              </div>
+              <div class="flex items-center">
+                <button id="search__btn" class="focus:outline-none btn  ml-8 w-12 h-full rounded-full text-black">
+                  <i class="hover:text-red-600 far fa-heart"></i>
+                </button>
+              </div>
+             
+            </div>
+            <!-- body -->
+            
+              <img src="74d86d49175403155ed829d3e1a88015" alt="image1" class="w-full h-48 object-cover mb-2">
+              <div class="p-3">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class=" text-red-600 fas fa-star"></i>
+                <span> 5.0 &middot;  (202) &middot; </span> 
+               <span> Nigeria </span> 
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Jollof Rice &middot;<span> 1hr 30mins</span>
+              </p>
+            </div>
+          </div>
+            <div class="backdrop w-10/12 md:w-1/4 hover:bg-transparent bg-white bg-opacity-10 rounded p-3 text-black border border-gray-300 shadow-lg">
+              <!-- header -->
+              <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+                <h3 class="text-xl font-semibold text-shadow">Author</h3>
+                <button id="search__btn" class="focus:outline-none btn  ml-8 w-12 h-full rounded-full text-black">
+                  <i class="hover:text-red-600 far fa-heart"></i>
+                </button>
+              </div>
+              <!-- body -->
+              <div>
+                <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+                <p class="mb-3 tracking-wide text-base text-shadow">
+                  <i class=" text-red-600 fas fa-star"></i>
+                  <span> 5.0 (202) </span> 
+                 <span> Country Name </span> 
+                </p>
+                <p class="mb-3 tracking-wide text-base text-shadow">
+                  Recipe Title <span> Preparation Time</span>
+                </p>
+            </div>
+        </div>
+        <div class="backdrop w-10/12 md:w-1/4 hover:bg-transparent bg-white bg-opacity-10 rounded p-3 text-black border border-gray-300 shadow-lg">
+          <!-- header -->
+          <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+            <h3 class="text-xl font-semibold text-shadow">Author</h3>
+            <button id="search__btn" class="focus:outline-none btn  ml-8 w-12 h-full rounded-full text-black">
+              <i class="hover:text-red-600 far fa-heart"></i>
+            </button>
+          </div>
+          <!-- body -->
+          <div>
+            <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+            <p class="mb-3 tracking-wide text-base text-shadow">
+              <i class=" text-red-600 fas fa-star"></i>
+              <span> 5.0 (202) </span> 
+             <span> Country Name </span> 
+            </p>
+            <p class="mb-3 tracking-wide text-base text-shadow">
+              Recipe Title <span> Preparation Time</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="underline text-xl font-medium py-4">
+        <a href="#">
+          Show All
+        </a>
+      </div>
+      </div>
+      <div id="by-regions" class="px-4">
+        <h2 class="text-2xl font-bold"> Recipes by Regions </h2>
+        <div class="bg-image w-full  flex justify-around items-center gap-3 py-5">
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" src="d5238de2bdd8ef8d6049a853cae077b7" alt="north-africa">
+          </a>
+          <p> North Africa</p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" src="5a5b1da5d50e14c1cb3b22f706420e4f" alt="east-africa">
+          </a>
+          <p> East Africa </p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" src="aa0bb9039ac211acd824fa41b93c6b12" alt="west-africa">
+          </a>
+          <p> West Africa</p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" alt="south-africa" src="a72d92444114f486c198461e57f844ed">
+          </a>
+          <p> South Africa </p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" alt="caribbean" src="a49d85c2a591ccbb5bb10677314efa34">
+          </a>
+          <p> Caribbean </p>
+        </div>
+      </div>
+      </div>
+
+
+      <div id="top-rated" class="px-4">
+        <h2 class="text-2xl font-bold"> My Saved Recipes </h2>
+        <div class="bg-image w-full  flex justify-around  items-center gap-3 py-5">
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="fas fa-star"></i>
+                <span> 5.0 (202) </span> 
+               <span> Country Name </span> 
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title 
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="42fb81261ae3f65888a03a8da7da6155" alt="image2" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="11a82d8281cae00a385fc43693203557" alt="image3" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="underline text-xl font-medium py-4">
+          <a href="#">
+            Show All
+          </a>
+        </div>
+     
+      </div>
+      <div id="by-diet" class="px-4">
+        <h2 class="text-2xl font-bold"> Recipes by Diet </h2>
+        <div class="bg-image w-full  flex justify-around items-center gap-3 py-5">
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" src="3b70639dedc9b4f0b7e4a15d7258f742" alt="vegan">
+          </a>
+          <p> Vegan </p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" src="de2b6a5aed1e1737065cdc35c7b27d2d" alt="vege">
+          </a>
+          <p> Vegetarian </p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" src="f80f82b4d76cb8da2eccc46c1f50af48" alt="west-africa">
+          </a>
+          <p> Pescetarian </p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" alt="omnivore" src="c885a69d29a247afce9bf1a41784f43f">
+          </a>
+          <p> Omnivore </p>
+        </div>
+        <div class="transform hover:-translate-y-2 transition delay-150 duration-300 ease-in-out backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg cursor-pointer">
+          <a>
+            <img class="w-full h-48 object-cover mb-2" alt="paleo" src="d1b8f9f80aefdc96face9f5375498c1d">
+          </a>
+          <p> Paleo </p>
+        </div>
+      </div>
+      </div>
+
+ 
+
+      <div id="all-results" class="px-4">
+        
+        <h2 class="text-2xl font-bold"> All Recipes </h2>
+        <div class="bg-image w-full  flex justify-around  items-center gap-3 py-5">
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="fas fa-star"></i>
+                <span> 5.0 (202) </span> 
+               <span> Country Name </span> 
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title 
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="42fb81261ae3f65888a03a8da7da6155" alt="image2" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black border border-gray-300 shadow-lg">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="11a82d8281cae00a385fc43693203557" alt="image3" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="pagination flex justify-center">
+        <button class="hover:shadow-lg backdrop bg-yellow-800 border border-gray-300 px-3 py-1.5 rounded-md focus:outline-none focus:ring-2 focus:ring-white focus:ring-opacity-40 hover:bg-opacity-10 text-lg">
+          Load Recipes
+        </button>
+      </div>
+
+      <div class="search-results">
+        <ul class="results">
+          <!-- 
+          <li class="preview">
+            <a class="preview__link preview__link--active" href="#23456">
+              <figure class="preview__fig">
+                <img src="src/img/test-1.jpg" alt="Test" />
+              </figure>
+              <div class="preview__data">
+                <h4 class="preview__title">Pasta with Tomato Cream ...</h4>
+                <p class="preview__publisher">The Pioneer Woman</p>
+                <div class="preview__user-generated">
+                  <svg>
+                    <use href="src/img/icons.svg#icon-user"></use>
+                  </svg>
+                </div>
+              </div>
+            </a>
+          </li>
+           -->
+        </ul>
+
+
+
+        <p class="copyright">
+          &copy; Copyright by
+          <a class="twitter-link" target="_blank" href="03bddcb2ad48fefeb41aa62e2b429e19">Juliet George</a>
+        </p>
+      </div>
+    </div>
+      <div class="recipe">
+        <!-- <div class="spinner">
+          <svg>
+            <use href="src/img/icons.svg#icon-loader"></use>
+          </svg>
+        </div> -->
+
+        <!-- <div class="error">
+            <div>
+              <svg>
+                <use href="src/img/icons.svg#icon-alert-triangle"></use>
+              </svg>
+            </div>
+            <p>No recipes found for your query. Please try again!</p>
+          </div> -->
+
+        <!--
+        <figure class="recipe__fig">
+          <img src="src/img/test-1.jpg" alt="Tomato" class="recipe__img" />
+          <h1 class="recipe__title">
+            <span>Pasta with tomato cream sauce</span>
+          </h1>
+        </figure>
+
+        <div class="recipe__details">
+          <div class="recipe__info">
+            <svg class="recipe__info-icon">
+              <use href="src/img/icons.svg#icon-clock"></use>
+            </svg>
+            <span class="recipe__info-data recipe__info-data--minutes">45</span>
+            <span class="recipe__info-text">minutes</span>
+          </div>
+          <div class="recipe__info">
+            <svg class="recipe__info-icon">
+              <use href="src/img/icons.svg#icon-users"></use>
+            </svg>
+            <span class="recipe__info-data recipe__info-data--people">4</span>
+            <span class="recipe__info-text">servings</span>
+
+            <div class="recipe__info-buttons">
+              <button class="btn--tiny btn--increase-servings">
+                <svg>
+                  <use href="src/img/icons.svg#icon-minus-circle"></use>
+                </svg>
+              </button>
+              <button class="btn--tiny btn--increase-servings">
+                <svg>
+                  <use href="src/img/icons.svg#icon-plus-circle"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="recipe__user-generated">
+            <svg>
+              <use href="src/img/icons.svg#icon-user"></use>
+            </svg>
+          </div>
+          <button class="btn--round">
+            <svg class="">
+              <use href="src/img/icons.svg#icon-bookmark-fill"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="recipe__ingredients">
+          <h2 class="heading--2">Recipe ingredients</h2>
+          <ul class="recipe__ingredient-list">
+            <li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="src/img/icons.svg#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">1000</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">g</span>
+                pasta
+              </div>
+            </li>
+
+            <li class="recipe__ingredient">
+              <svg class="recipe__icon">
+                <use href="src/img/icons.svg#icon-check"></use>
+              </svg>
+              <div class="recipe__quantity">0.5</div>
+              <div class="recipe__description">
+                <span class="recipe__unit">cup</span>
+                ricotta cheese
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="recipe__directions">
+          <h2 class="heading--2">How to cook it</h2>
+          <p class="recipe__directions-text">
+            This recipe was carefully designed and tested by
+            <span class="recipe__publisher">The Pioneer Woman</span>. Please check out
+            directions at their website.
+          </p>
+          <a
+            class="btn--small recipe__btn"
+            href="http://thepioneerwoman.com/cooking/pasta-with-tomato-cream-sauce/"
+            target="_blank"
+          >
+            <span>Directions</span>
+            <svg class="search__icon">
+              <use href="src/img/icons.svg#icon-arrow-right"></use>
+            </svg>
+          </a>
+        </div>
+        -->
+      </div>
+ 
+
+    <div class="overlay hidden"></div>
+    <div class="add-recipe-window hidden">
+      <button class="btn--close-modal">&times;</button>
+      <form class="upload">
+        <div class="upload__column">
+          <h3 class="upload__heading">Recipe data</h3>
+          <label>Title</label>
+          <input value="TEST" required="" name="title" type="text">
+          <label>URL</label>
+          <input value="TEST" required="" name="sourceUrl" type="text">
+          <label>Image URL</label>
+          <input value="TEST" required="" name="image" type="text">
+          <label>Publisher</label>
+          <input value="TEST" required="" name="publisher" type="text">
+          <label>Prep time</label>
+          <input value="23" required="" name="cookingTime" type="number">
+          <label>Servings</label>
+          <input value="23" required="" name="servings" type="number">
+        </div>
+
+        <div class="upload__column">
+          <h3 class="upload__heading">Ingredients</h3>
+          <label>Ingredient 1</label>
+          <input value="0.5,kg,Rice" type="text" required="" name="ingredient-1" placeholder="Format: 'Quantity,Unit,Description'">
+          <label>Ingredient 2</label>
+          <input value="1,,Avocado" type="text" name="ingredient-2" placeholder="Format: 'Quantity,Unit,Description'">
+          <label>Ingredient 3</label>
+          <input value=",,salt" type="text" name="ingredient-3" placeholder="Format: 'Quantity,Unit,Description'">
+          <label>Ingredient 4</label>
+          <input type="text" name="ingredient-4" placeholder="Format: 'Quantity,Unit,Description'">
+          <label>Ingredient 5</label>
+          <input type="text" name="ingredient-5" placeholder="Format: 'Quantity,Unit,Description'">
+          <label>Ingredient 6</label>
+          <input type="text" name="ingredient-6" placeholder="Format: 'Quantity,Unit,Description'">
+        </div>
+
+        <button class="btn upload__btn">
+          <svg>
+            <use href="2960a0c52f887e25c49c57696d4cd01b"></use>
+          </svg>
+          <span>Upload</span>
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

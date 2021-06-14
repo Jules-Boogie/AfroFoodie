@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/index.HASH_REF_1f4ae320034955e4a6b30ca3928ba5ce.css">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+    <script defer="" src="/index.HASH_REF_6315ebf922a29661e8263da0250b04c7.js"></script>
+    <script defer="" src="/index.HASH_REF_6315ebf922a29661e8263da0250b04c7.js"></script>
+
+    <title>AfroFoodie// Search for Afro Inspired recipes</title>
+  </head>
+
+  <body>
+    <header class="header flex justify-between items-center">
+      <div class="relative h-32">
+        <a href="/index.html">
+          <img class="h-32" src="/logoLight.HASH_REF_b3abe030c9830924454b2356c69b13f5.png" alt="Logo">
+        </a>
+      </div>
+
+      <form class="border relative h-10 rounded-full py-2 px-6 hover:shadow-lg">
+        <input name="search" type="text" placeholder="Search Recipes">
+        <button id="search-btn" class="
+            hover:bg-red-600
+            focus:outline-none
+            btn
+            ml-8
+            w-12
+            h-full
+            rounded-full
+            text-black
+          ">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <nav class="nav">
+        <ul class="nav__list flex">
+          <div class="relative h-10 rounded-full py-2 px-4 hover:shadow-lg">
+            <button class="focus:outline-none text-md font-semibold text-shadow">
+              Add recipe
+            </button>
+          </div>
+          <div class="
+              border
+              relative
+              h-10
+              rounded-full
+              py-2
+              px-4
+              hover:shadow-lg
+              ml-8
+            ">
+            <button class="focus:outline-none text-md font-semibold text-shadow">
+              <i class="fas fa-bars"></i>
+              My Recipes
+            </button>
+            <div class="bookmarks">
+              <!-- the list component I used for VU -->
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <div class="bodyody h-full w-full text-black">
+      <div id="saved-recipes" class="hidden px-12">
+        <h2 class="text-2xl font-bold">My Saved Recipes</h2>
+        <div class="bg-image w-full flex justify-around items-center gap-3 py-5">
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Beyonce</h3>
+              <button id="search__btn" class="
+                  focus:outline-none
+                  btn
+                  ml-8
+                  w-12
+                  h-full
+                  rounded-full
+                  text-black
+                ">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="https://i.postimg.cc/SxLx0fHV/bg01.jpg" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              cursor-pointer
+              bg-white bg-opacity-10
+              rounded
+              text-black
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 p-3 flex justify-between border-gray-300">
+              <div class="flex items-center">
+                <img class="
+                    object-cover
+                    w-10
+                    h-10
+                    rounded-full
+                    border-2 border-gray-300
+                  " src="https://ichef.bbci.co.uk/news/976/cpsprodpb/1AEE/production/_102849860_420dd9fd-ed9c-4c75-b1fa-67d276834c01.jpg">
+                <h3 class="
+                    ml-2
+                    hover:underline
+                    cursor-pointer
+                    text-sm
+                    font-semibold
+                    text-shadow
+                  ">
+                  Yewande
+                </h3>
+              </div>
+              <div class="flex items-center">
+                <button id="search__btn" class="
+                    focus:outline-none
+                    btn
+                    ml-8
+                    w-12
+                    h-full
+                    rounded-full
+                    text-black
+                  ">
+                  <i class="hover:text-red-600 far fa-heart"></i>
+                </button>
+              </div>
+            </div>
+            <!-- body -->
+
+            <img src="https://i0.wp.com/biscuitsandladles.com/wp-content/uploads/2017/06/beef-jollof.jpg?ssl=1" alt="image1" class="w-full h-48 object-cover mb-2">
+            <div class="p-3">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 &middot; (202) &middot; </span>
+                <span> Nigeria </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Jollof Rice &middot;<span> 1hr 30mins</span>
+              </p>
+            </div>
+          </div>
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Author</h3>
+              <button id="search__btn" class="
+                  focus:outline-none
+                  btn
+                  ml-8
+                  w-12
+                  h-full
+                  rounded-full
+                  text-black
+                ">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="https://i.postimg.cc/SxLx0fHV/bg01.jpg" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Author</h3>
+              <button id="search__btn" class="
+                  focus:outline-none
+                  btn
+                  ml-8
+                  w-12
+                  h-full
+                  rounded-full
+                  text-black
+                ">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="https://i.postimg.cc/SxLx0fHV/bg01.jpg" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="by-regions" class="px-4">
+        <h2 class="text-2xl font-bold">Recipes by Regions</h2>
+        <div class="bg-image w-full flex justify-around items-center gap-3 py-5">
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" src="http://res.cloudinary.com/dsmafmqwi/image/upload/v1615494093/virtualtrips/tours/muvfwdbjfsmbrxpwcmgz.jpg" alt="north-africa">
+            </a>
+            <p>North Africa</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" src="https://aot-wpengine.netdna-ssl.com/wp-content/uploads/2013/07/east-african-food.jpg" alt="east-africa">
+            </a>
+            <p>East Africa</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" src="/background.HASH_REF_6dbf29a834feccc82d82e503536dca42.PNG" alt="west-africa">
+            </a>
+            <p>West Africa</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" alt="south-africa" src="https://www.thespruceeats.com/thmb/vhj9QlZ3qIhlWw0ps_dd4khR3rM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bobotie-and-yellow-rice--south-african-cuisine--805248010-5ac23a47ae9ab800377f96a0.jpg">
+            </a>
+            <p>South Africa</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" alt="caribbean" src="https://legacy.travelnoire.com/wp-content/uploads/2019/03/48374641_2678424255508970_4701473533815947264_n.jpg">
+            </a>
+            <p>Caribbean</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="top-rated__div" class="px-4">
+        <h2 class="text-2xl font-bold">Top Rated Recipes</h2>
+        <div id="top-rated" class="bg-image w-full flex justify-around items-center gap-3 py-5">
+          <!-- <div
+            class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            "
+          >
+          
+            <div class="w-full mb-3 pb-3 flex justify-between">
+              <h3 class="text-xl font-semibold text-shadow">
+                Preparation Time
+              </h3>
+              <i class="far fa-heart"></i>
+            </div>
+           
+            <div>
+              <img
+                src="https://i.postimg.cc/SxLx0fHV/bg01.jpg"
+                alt="image1"
+                class="w-full h-48 object-cover mb-2"
+              />
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                omnis.
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            "
+          >
+           
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">
+                Preparation Time
+              </h3>
+              <i class="far fa-heart"></i>
+            </div>
+        
+            <div>
+              <img
+                src="https://i.postimg.cc/SxLx0fHV/bg01.jpg"
+                alt="image1"
+                class="w-full h-48 object-cover mb-2"
+              />
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            "
+          >
+         
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">
+                Preparation Time
+              </h3>
+              <i class="far fa-heart"></i>
+            </div>
+       
+            <div>
+              <img
+                src="https://i.postimg.cc/J4khxLqf/bg02.jpg"
+                alt="image2"
+                class="w-full h-48 object-cover mb-2"
+              />
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                omnis.
+              </p>
+            </div>
+          </div>
+          <div
+            class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+            "
+          >
+           
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">
+                Preparation Time
+              </h3>
+              <i class="far fa-heart"></i>
+            </div>
+            
+            <div>
+              <img
+                src="https://i.postimg.cc/VNYLzb8w/bg03.jpg"
+                alt="image3"
+                class="w-full h-48 object-cover mb-2"
+              />
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa,
+                omnis.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+      <div id="by-diet" class="px-4">
+        <h2 class="text-2xl font-bold">Recipes by Diet</h2>
+        <div class="bg-image w-full flex justify-around items-center gap-3 py-5">
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" src="https://images.squarespace-cdn.com/content/v1/542a1eece4b07e544a693b04/1524026741164-JFIZ17PUEZK8SCMEAVFP/ke17ZwdGBToddI8pDm48kOQ3RhYac-aNSkiHO0RlES1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxZY5_tqj_k7S_qX7Glx3bDyE9LkMUO-anM9bzUgQ0GyPNTvk9QNqtpuBq74DSlQQ0/image-asset.jpeg?format=750w" alt="vegan">
+            </a>
+            <p>Vegan</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" src="https://cdn.vox-cdn.com/thumbor/xhU-iXNOxbZ2Pcq0PZ6OiQu3QRI=/0x135:602x587/1400x1400/filters:focal(0x135:602x587):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/47205638/adey_abeba.0.0.png" alt="vege">
+            </a>
+            <p>Vegetarian</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" src="/background.HASH_REF_ae8298d9f90130a9fc9367341ad05786.jpg" alt="west-africa">
+            </a>
+            <p>Pescetarian</p>
+          </div>
+          <div class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            ">
+            <a>
+              <img class="w-full h-48 object-cover mb-2" alt="omnivore" src="https://kuulpeeps.com/wp-content/uploads/2020/09/EC060CF3-15E6-41E6-9C34-5975ADC10042.jpeg">
+            </a>
+            <p>Omnivore</p>
+          </div>
+          <!-- <div
+            class="
+              transform
+              hover:-translate-y-2
+              transition
+              delay-150
+              duration-300
+              ease-in-out
+              backdrop
+              w-10/12
+              md:w-1/4
+              bg-white bg-opacity-10
+              rounded-md
+              p-3
+              text-black
+              border border-gray-300
+              shadow-lg
+              cursor-pointer
+            "
+          >
+            <a>
+              <img
+                class="w-full h-48 object-cover mb-2"
+                alt="paleo"
+                src="https://img.sndimg.com/food/image/upload/q_92,fl_progressive,w_1200,c_scale/v1/img/recipes/19/54/74/sOjF41znSkS43qZuHcUe_6F1D07D9-13BF-4B0B-9562-314666455C7C-697-0000011EA9A569F2.jpeg"
+              />
+            </a>
+            <p>Paleo</p>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="px-4">
+        <h2 class="text-2xl font-bold">All Recipes</h2>
+        <div id="all-results" class="bg-image w-full flex justify-around items-center gap-3 py-5">
+          <!-- 
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black  border border-gray-300 shadow-lg">
+           
+            <div class="w-full mb-3 pb-3 flex justify-between">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+           
+            <div>
+              <img src="https://i.postimg.cc/SxLx0fHV/bg01.jpg" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded p-3 text-black border border-gray-300 shadow-lg">
+           
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+        
+            <div>
+              <img src="https://i.postimg.cc/SxLx0fHV/bg01.jpg" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="fas fa-star"></i>
+                <span> 5.0 (202) </span> 
+               <span> Country Name </span> 
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title 
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black border border-gray-300 shadow-lg">
+           
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+            
+            <div>
+              <img src="https://i.postimg.cc/J4khxLqf/bg02.jpg" alt="image2" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+
+            </div>
+          </div>
+          <div class="backdrop w-10/12 md:w-1/4 bg-white bg-opacity-10 rounded-md p-3 text-black border border-gray-300 shadow-lg">
+            
+            <div class="w-full mb-3 pb-3  flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Preparation Time</h3>
+              <i class="far fa-heart"></i>
+            </div>
+        
+            <div>
+              <img src="https://i.postimg.cc/VNYLzb8w/bg03.jpg" alt="image3" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, omnis.
+              </p>
+            </div>
+          </div> -->
+        </div>
+      </div>
+
+      <div id="load-more" class="pagination flex justify-center">
+        <button class="
+            hover:shadow-lg
+            backdrop
+            border border-gray-300
+            px-3
+            py-1.5
+            rounded-md
+            focus:outline-none
+            focus:ring-2 focus:ring-white focus:ring-opacity-40
+            hover:bg-opacity-10
+            text-lg
+          ">
+          Load Recipes
+        </button>
+      </div>
+
+      <div class="search-results">
+        <ul class="results"></ul>
+
+        <p class="copyright">
+          &copy; Copyright by
+          <a class="twitter-link" target="_blank" href="https://www.linkedin.com/in/juliet-g-864950b8/">Juliet George</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
