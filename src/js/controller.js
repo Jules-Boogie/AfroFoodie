@@ -72,7 +72,7 @@ const search = e => {
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
-  allResultsTitle.innerHTML = 'Search Results';
+  allResultsTitle.innerHTML = `${searchTerm}`;
   if (searchResult.length < 4) {
     loadBtn.classList.add('hidden');
   }

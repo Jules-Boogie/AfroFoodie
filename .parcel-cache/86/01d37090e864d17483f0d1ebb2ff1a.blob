@@ -7,10 +7,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
 
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/index.928ba5ce.css">
+    <link rel="stylesheet" href="/index.HASH_REF_1f4ae320034955e4a6b30ca3928ba5ce.css">
     <script defer="" src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
-    <script defer="" src="/index.250b04c7.js"></script>
-    <script defer="" src="/index.250b04c7.js"></script>
+    <script defer="" src="/index.HASH_REF_6315ebf922a29661e8263da0250b04c7.js"></script>
+    <script defer="" src="/index.HASH_REF_6315ebf922a29661e8263da0250b04c7.js"></script>
 
     <title>AfroFoodie// Search for Afro Inspired recipes</title>
   </head>
@@ -19,7 +19,7 @@
     <header class="header mb-12 px-4 flex justify-between items-center">
       <div class="relative h-32">
         <a href="/index.html">
-          <img class="h-32" src="/logoDark.84d82f06.png" alt="Logo">
+          <img class="h-32" src="/logoDark.HASH_REF_7f7c90d181d37d4fcfb08b9684d82f06.png" alt="Logo">
         </a>
       </div>
 
@@ -321,7 +321,7 @@
               cursor-pointer
             ">
             <a>
-              <img class="w-full h-48 object-cover mb-2" src="/background.536dca42.PNG" alt="west-africa">
+              <img class="w-full h-48 object-cover mb-2" src="/background.HASH_REF_6dbf29a834feccc82d82e503536dca42.PNG" alt="west-africa">
             </a>
             <p>West Africa</p>
           </div>
@@ -583,7 +583,7 @@
               cursor-pointer
             ">
             <a>
-              <img class="w-full h-48 object-cover mb-2" src="/background.1ad05786.jpg" alt="west-africa">
+              <img class="w-full h-48 object-cover mb-2" src="/background.HASH_REF_ae8298d9f90130a9fc9367341ad05786.jpg" alt="west-africa">
             </a>
             <p>Pescetarian</p>
           </div>
