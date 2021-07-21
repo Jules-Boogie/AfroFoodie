@@ -1,0 +1,11 @@
+const state = {};
+const getRecipes = () => {
+  require('../data/data.js').then(response => {
+    return {
+      recipes: response.recipes,
+      region: response.region,
+      diet: response.diet
+    };
+  }).catch(err => console.log(err));
+};
+module.exports = state;

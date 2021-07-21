@@ -1,3 +1,4 @@
+import * as model from './model.js';
 const recipeContainer = document.querySelector('#all-results');
 const topRatedContainer = document.querySelector('#top-rated');
 const loadBtn = document.querySelector('#load-more');
@@ -7,17 +8,19 @@ const topRatedDiv = document.querySelector('#top-rated__div');
 const allResultsTitle = document.querySelector('#all-results-title');
 const dietContainer = document.querySelector('#by-diet');
 const regionsContainer = document.querySelector('#by-regions');
+const regionsDiv = document.querySelector('#recipes-region__div');
+const dietDiv = document.querySelector('#diet__div');
+const recipe = document.querySelector('#recipe');
 
-const recipes = require('../data/recipes');
-
-const renderingAllRecipes = (location, data) => {
+const renderingAllRecipes = (location, data, type) => {
   data.forEach((recipe, index) => {
-    const markup = `<div data-id=${index} class="backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
+    const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
+    <a href="/detail.html">
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
-      <div class="flex items-center">
+      <div data-id=${index} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${
           recipe.publisher.pic ||
-          'https://lh3.googleusercontent.com/proxy/26L4LrmkTyBm8qWB2a34D0utKd5nNie7-fCjGxCKccQPtB2oqMshWGYgFjgeZ45SMU5AVFrQxZeTA4wjVXUyotCE2Nf7ND-RR6QEeG5b3bWdNtwEbEdV2-KncacR-0YSLxuRlE73pGCcPw'
+          'https://www.allthetests.com/quiz22/picture/pic_1171831236_1.png'
         } />
         <h3 class="capitalize ml-2 hover:underline cursor-pointer text-sm font-semibold text-shadow">${recipe.publisher.name.toLocaleLowerCase()}</h3>
       </div>
@@ -46,26 +49,27 @@ const renderingAllRecipes = (location, data) => {
     }hr ${recipe.time.split(':')[1]}mins</span>
       </p>
     </div>
+    </a>
   </div>`;
     location.insertAdjacentHTML('afterbegin', markup);
   });
 };
 //render all recipes
-renderingAllRecipes(recipeContainer, recipes.slice(0, 4));
+renderingAllRecipes(recipeContainer, model.state.recipes.slice(0, 3),'-all');
 
 //render top rated recipes
-const topRatedResults = recipes
+const topRatedResults = model.state.recipes
   .filter(recipe => recipe.ratingsAverage >= 4)
   .sort((a, b) => b.ratingsQuantity - a.ratingsQuantity)
-  .slice(0, 4)
+  .slice(0, 3)
   .reverse();
-renderingAllRecipes(topRatedContainer, topRatedResults);
+renderingAllRecipes(topRatedContainer, topRatedResults,'-top');
 
 //search algorithm
 const search = e => {
   e.preventDefault();
   const searchTerm = formEl.search.value;
-  const searchResult = recipes.filter(recipe =>
+  const searchResult = model.recipes.filter(recipe =>
     recipe.ingredients.join().includes(searchTerm)
   );
   topRatedDiv.classList.add('hidden');
@@ -76,16 +80,66 @@ const search = e => {
   if (searchResult.length < 4) {
     loadBtn.classList.add('hidden');
   }
-  renderingAllRecipes(recipeContainer, searchResult.slice(0, 4));
+  renderingAllRecipes(recipeContainer, searchResult.slice(0, 3),'-search');
 };
 
-searchBtn.addEventListener('click', search);
-
-const filter = region => {
-  const filterResult = recipes.filter(recipe => recipe.tags.includes(region));
+const filter = (e) => {
+  e.preventDefault()
+  console.log(e.target.dataset.id)
+  const filterResult = model.state.recipes.filter(recipe => recipe.tags.includes(e.target.dataset.id));
   topRatedDiv.classList.add('hidden');
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
-  allResultsTitle.innerHTML = `Recipes from ${region}`;
+  allResultsTitle.innerHTML = `${(e.target.dataset.id).toLocaleLowerCase().split('-')[0]} ${(e.target.dataset.id).toLocaleLowerCase().split('-')[1] || ""} Recipes`;
+  renderingAllRecipes(recipeContainer,filterResult.slice(0,3));
 };
+
+searchBtn.addEventListener('click', search);
+regionsDiv.addEventListener('click', filter);
+dietDiv.addEventListener('click',filter);
+
+
+const renderTags = (data, location,type) => {
+  data.forEach(reg => {
+    const markup = `
+      <div data-id=${reg.id}
+                  class="
+                  slide${type}
+                    transform
+                    hover:-translate-y-2
+                    transition
+                    delay-150
+                    duration-300
+                    ease-in-out
+                    backdrop
+                    w-10/12
+                    md:w-1/4
+                    bg-white bg-opacity-10
+                    rounded-md
+                    p-3
+                    text-white
+                    border border-gray-300
+                    shadow-lg
+                    cursor-pointer
+                    mr-4
+                  "
+                >
+                  <a>
+                    <img
+                    data-id=${reg.id}
+                      class="w-full h-48 object-cover mb-2"
+                      src=${reg.img}
+                      alt="east-africa"
+                    />
+                  </a>
+                  <p>${reg.name}</p>
+                </div>
+      `
+
+    location.insertAdjacentHTML('afterbegin', markup);
+  });
+};
+renderTags(model.state.region.slice(0,3), regionsDiv,'-region');
+renderTags(model.state.diet.slice(0,3), dietDiv,'-diet');
+
