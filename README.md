@@ -1,5 +1,5 @@
 # AfroFoodie
- A web application that stores recipes. 
+ An offline application to stores and use recipes. 
 
 
 ### App Gif(Search Feature)
