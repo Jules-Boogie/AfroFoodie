@@ -34,7 +34,7 @@
         const currentRecipe = model.state.recipes[id];
         const markup = `
     <div class="flex flex-wrap md bg-white items-center">
-    <div class="bg-white w-full md:w-1/2 ">
+    <div class="bg-white w-full md:w-1/2 h-full">
       <div class="mx-32">
         <h1 class="text-6xl text-black font-bold mt-8">${currentRecipe.name}</h1>
      
@@ -70,7 +70,7 @@
       <img
         id="recipe-image"
         src=${currentRecipe.images[0]}
-        class="w-full object-cover h-screen"
+        class="w-full object-cover"
         alt=""
       />
       <div id="recipe-reviews">

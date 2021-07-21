@@ -1,4 +1,5 @@
-import * as model from './model.js';
+import * as model from './model';
+import * as config from './config';
 const recipeContainer = document.querySelector('#all-results');
 const topRatedContainer = document.querySelector('#top-rated');
 const loadBtn = document.querySelector('#load-more');
@@ -10,8 +11,28 @@ const dietContainer = document.querySelector('#by-diet');
 const regionsContainer = document.querySelector('#by-regions');
 const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
+const loadButton = document.querySelector('#load-more');
 
-const renderingAllRecipes = (location, data, type) => {
+
+let currentPage = 1;
+
+const getPageData = page => {
+  let start = (page - 1) * config.PAGE_NUMBER_COUNT;
+  let end = page * config.PAGE_NUMBER_COUNT;
+
+  if(end >= model.state.recipes.length) loadButton.classList.add('hidden')
+  return model.state.recipes.slice(start, end);
+};
+
+const changePage = () => {
+  currentPage++
+  renderingAllRecipes(recipeContainer, getPageData(currentPage), '-all','beforeend')
+};
+
+loadButton.addEventListener('click', changePage);
+
+
+const renderingAllRecipes = (location, data, type,position='afterbegin') => {
   data.forEach((recipe, index) => {
     const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
     <a href="/detail.html#${recipe.id}">
@@ -50,11 +71,11 @@ const renderingAllRecipes = (location, data, type) => {
     </div>
     </a>
   </div>`;
-    location.insertAdjacentHTML('afterbegin', markup);
+    location.insertAdjacentHTML(position, markup);
   });
 };
 //render all recipes
-renderingAllRecipes(recipeContainer, model.state.recipes.slice(0, 3), '-all');
+renderingAllRecipes(recipeContainer, getPageData(currentPage), '-all');
 
 //render top rated recipes
 const topRatedResults = model.state.recipes

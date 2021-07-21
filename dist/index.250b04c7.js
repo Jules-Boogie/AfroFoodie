@@ -442,7 +442,8 @@ id) /*: string*/
 }
 
 },{}],"3miIZ":[function(require,module,exports) {
-var _modelJs = require('./model.js');
+var _model = require('./model');
+var _config = require('./config');
 const recipeContainer = document.querySelector('#all-results');
 const topRatedContainer = document.querySelector('#top-rated');
 const loadBtn = document.querySelector('#load-more');
@@ -454,7 +455,20 @@ const dietContainer = document.querySelector('#by-diet');
 const regionsContainer = document.querySelector('#by-regions');
 const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
-const renderingAllRecipes = (location, data, type) => {
+const loadButton = document.querySelector('#load-more');
+let currentPage = 1;
+const getPageData = page => {
+  let start = (page - 1) * _config.PAGE_NUMBER_COUNT;
+  let end = page * _config.PAGE_NUMBER_COUNT;
+  if (end >= _model.state.recipes.length) loadButton.classList.add('hidden');
+  return _model.state.recipes.slice(start, end);
+};
+const changePage = () => {
+  currentPage++;
+  renderingAllRecipes(recipeContainer, getPageData(currentPage), '-all', 'beforeend');
+};
+loadButton.addEventListener('click', changePage);
+const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
   data.forEach((recipe, index) => {
     const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
     <a href="/detail.html#${recipe.id}">
@@ -484,19 +498,19 @@ const renderingAllRecipes = (location, data, type) => {
     </div>
     </a>
   </div>`;
-    location.insertAdjacentHTML('afterbegin', markup);
+    location.insertAdjacentHTML(position, markup);
   });
 };
 // render all recipes
-renderingAllRecipes(recipeContainer, _modelJs.state.recipes.slice(0, 3), '-all');
+renderingAllRecipes(recipeContainer, getPageData(currentPage), '-all');
 // render top rated recipes
-const topRatedResults = _modelJs.state.recipes.filter(recipe => recipe.ratingsAverage >= 4).sort((a, b) => b.ratingsQuantity - a.ratingsQuantity).slice(0, 3).reverse();
+const topRatedResults = _model.state.recipes.filter(recipe => recipe.ratingsAverage >= 4).sort((a, b) => b.ratingsQuantity - a.ratingsQuantity).slice(0, 3).reverse();
 renderingAllRecipes(topRatedContainer, topRatedResults, '-top');
 // search algorithm
 const search = e => {
   e.preventDefault();
   const searchTerm = formEl.search.value;
-  const searchResult = _modelJs.recipes.filter(recipe => recipe.ingredients.join().includes(searchTerm));
+  const searchResult = _model.recipes.filter(recipe => recipe.ingredients.join().includes(searchTerm));
   topRatedDiv.classList.add('hidden');
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
@@ -510,7 +524,7 @@ const search = e => {
 const filter = e => {
   e.preventDefault();
   console.log(e.target.dataset.id);
-  const filterResult = _modelJs.state.recipes.filter(recipe => recipe.tags.includes(e.target.dataset.id));
+  const filterResult = _model.state.recipes.filter(recipe => recipe.tags.includes(e.target.dataset.id));
   topRatedDiv.classList.add('hidden');
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
@@ -560,27 +574,18 @@ const renderTags = (data, location, type) => {
     location.insertAdjacentHTML('afterbegin', markup);
   });
 };
-renderTags(_modelJs.state.region.slice(0, 3), regionsDiv, '-region');
-renderTags(_modelJs.state.diet.slice(0, 3), dietDiv, '-diet');
+renderTags(_model.state.region.slice(0, 3), regionsDiv, '-region');
+renderTags(_model.state.diet.slice(0, 3), dietDiv, '-diet');
 
-},{"./model.js":"1hp6y"}],"1hp6y":[function(require,module,exports) {
+},{"./config":"6pr2F","./model":"1hp6y"}],"6pr2F":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
-_parcelHelpers.export(exports, "state", function () {
-  return state;
+_parcelHelpers.export(exports, "PAGE_NUMBER_COUNT", function () {
+  return PAGE_NUMBER_COUNT;
 });
-var _dataData = require('../data/data');
-var _dataDataDefault = _parcelHelpers.interopDefault(_dataData);
-const state = {
-  recipes: _dataDataDefault.default.recipes.map((recipe, id) => ({
-    ...recipe,
-    id: id
-  })),
-  region: _dataDataDefault.default.region,
-  diet: _dataDataDefault.default.diet
-};
+const PAGE_NUMBER_COUNT = 3;
 
-},{"../data/data":"3X9FW","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {
@@ -622,6 +627,23 @@ exports.export = function (dest, destName, get) {
     get: get
   });
 };
-},{}]},["7BONy","3miIZ"], "3miIZ", "parcelRequire8eee")
+},{}],"1hp6y":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "state", function () {
+  return state;
+});
+var _dataData = require('../data/data');
+var _dataDataDefault = _parcelHelpers.interopDefault(_dataData);
+const state = {
+  recipes: _dataDataDefault.default.recipes.map((recipe, id) => ({
+    ...recipe,
+    id: id
+  })),
+  region: _dataDataDefault.default.region,
+  diet: _dataDataDefault.default.diet
+};
+
+},{"../data/data":"3X9FW","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}]},["7BONy","3miIZ"], "3miIZ", "parcelRequire8eee")
 
 //# sourceMappingURL=index.250b04c7.js.map

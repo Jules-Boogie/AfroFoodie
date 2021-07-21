@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="0152b3caf5f1ca049fcbef253371c05c" rel="stylesheet">
+
+    <link href="ec9ea45c60655bb19c4f2c8c817e49bc" rel="stylesheet">
+    <link rel="stylesheet" href="df53f3ca9eb9ee15113a2f9de6dd5775">
+    <script defer="" src="9943fe1fe9c744d4466927db191cbbfc" data-auto-a11y="true"></script>
+    <script defer="" src="a6b769118319105a3aa8b3df03249e87"></script>
+    <script defer="" src="5af5013967da8fc74e52920be53227dc"></script>
+    <script defer="" src="df65cc15c9c73d501fe6c217854b22b0"></script>
+
+    <title>AfroFoodie// Search for Afro Inspired recipes</title>
+  </head>
+
+  <body>
+    <header class="header mb-12 px-4 flex justify-between items-center">
+      <div class="relative h-32">
+        <a href="33edaf6d12d13fd3397234e18ac8a5e2">
+          <img class="h-32" src="4cf2083d3cecffe0568f4c4a220f6f77" alt="Logo">
+        </a>
+      </div>
+
+      <form class="border relative h-10 rounded-full py-2 px-6 hover:shadow-lg">
+        <input name="search" type="text" placeholder="Search Recipes">
+        <button id="search-btn" class="
+            hover:bg-red-600
+            focus:outline-none
+            btn
+            ml-8
+            w-12
+            h-full
+            rounded-full
+            text-white
+          ">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <nav class="nav">
+        <ul class="nav__list flex">
+          <div class="relative h-10 rounded-full py-2 px-4 hover:shadow-lg">
+            <button class="focus:outline-none text-md font-semibold text-shadow">
+              Add recipe
+            </button>
+          </div>
+          <div class="
+              border
+              relative
+              h-10
+              rounded-full
+              py-2
+              px-4
+              hover:shadow-lg
+              ml-8
+            ">
+            <button class="focus:outline-none text-md font-semibold text-shadow">
+              <i class="fas fa-bars"></i>
+              My Recipes
+            </button>
+            <div class="bookmarks">
+              <!-- the list component I used for VU -->
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    
+    <div class="bodyody h-full w-full text-white">
+      <div id="saved-recipes" class="hidden px-12">
+        <h2 class="text-2xl font-bold">My Saved Recipes</h2>
+        <div class="bg-image w-full flex justify-around items-center gap-3 py-5">
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-white
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Beyonce</h3>
+              <button id="search__btn" class="
+                  focus:outline-none
+                  btn
+                  ml-8
+                  w-12
+                  h-full
+                  rounded-full
+                  text-white
+                ">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              cursor-pointer
+              bg-white bg-opacity-10
+              rounded
+              text-white
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 p-3 flex justify-between border-gray-300">
+              <div class="flex items-center">
+                <img class="
+                    object-cover
+                    w-10
+                    h-10
+                    rounded-full
+                    border-2 border-gray-300
+                  " src="43d907540c27c767667efa3c9b0ea50a">
+                <h3 class="
+                    ml-2
+                    hover:underline
+                    cursor-pointer
+                    text-sm
+                    font-semibold
+                    text-shadow
+                  ">
+                  Yewande
+                </h3>
+              </div>
+              <div class="flex items-center">
+                <button id="search__btn" class="
+                    focus:outline-none
+                    btn
+                    ml-8
+                    w-12
+                    h-full
+                    rounded-full
+                    text-white
+                  ">
+                  <i class="hover:text-red-600 far fa-heart"></i>
+                </button>
+              </div>
+            </div>
+            <!-- body -->
+
+            <img src="74d86d49175403155ed829d3e1a88015" alt="image1" class="w-full h-48 object-cover mb-2">
+            <div class="p-3">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 &middot; (202) &middot; </span>
+                <span> Nigeria </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Jollof Rice &middot;<span> 1hr 30mins</span>
+              </p>
+            </div>
+          </div>
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-white
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Author</h3>
+              <button id="search__btn" class="
+                  focus:outline-none
+                  btn
+                  ml-8
+                  w-12
+                  h-full
+                  rounded-full
+                  text-white
+                ">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+          <div class="
+              backdrop
+              w-10/12
+              md:w-1/4
+              hover:bg-transparent
+              bg-white bg-opacity-10
+              rounded
+              p-3
+              text-white
+              border border-gray-300
+              shadow-lg
+            ">
+            <!-- header -->
+            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
+              <h3 class="text-xl font-semibold text-shadow">Author</h3>
+              <button id="search__btn" class="
+                  focus:outline-none
+                  btn
+                  ml-8
+                  w-12
+                  h-full
+                  rounded-full
+                  text-white
+                ">
+                <i class="hover:text-red-600 far fa-heart"></i>
+              </button>
+            </div>
+            <!-- body -->
+            <div>
+              <img src="e1138f3200ba8b931057258833342918" alt="image1" class="w-full h-48 object-cover mb-2">
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                <i class="text-red-600 fas fa-star"></i>
+                <span> 5.0 (202) </span>
+                <span> Country Name </span>
+              </p>
+              <p class="mb-3 tracking-wide text-base text-shadow">
+                Recipe Title <span> Preparation Time</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="by-regions" class="mb-12 px-4">
+        <h2 class="text-2xl font-bold flex justify-center">
+          Recipes by Regions
+        </h2>
+        <!-- <div class="mx-4 flex"> -->
+        <!-- <i class="cursor-pointer self-center fas fa-arrow-circle-left"></i> -->
+        <div id="recipes-region__div" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <!-- <i class="cursor-pointer self-center fas fa-arrow-circle-right"></i> -->
+        <!-- </div> -->
+      </div>
+
+      <div id="top-rated__div" class="mb-12 px-4">
+        <h2 class="text-2xl font-bold flex justify-center">
+          Top Rated Recipes
+        </h2>
+        <!-- <i class="fas fa-arrow-circle-left"></i> -->
+        <div id="top-rated" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <!-- <i class="fas fa-arrow-circle-right"></i> -->
+      </div>
+      <div id="by-diet" class="mb-12 px-4">
+        <h2 class="text-2xl font-bold flex justify-center">Recipes by Diet</h2>
+        <!-- <i class="fas fa-arrow-circle-left"></i> -->
+        <div id="diet__div" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <!-- <i class="fas fa-arrow-circle-right"></i> -->
+      </div>
+
+      <div id="recipes-result" class="px-4">
+        <h2 id="all-results-title" class="capitalize text-2xl font-bold flex justify-center">
+          All Recipes
+        </h2>
+       
+        <div id="all-results" class="
+            bg-image
+            w-full
+            flex
+            justify-center
+            flex-grow-0
+            items-center
+            gap-3
+            py-5
+          "></div>
+        <div class="text-center">
+          <button <i="" class="fas fa-arrow-circle-left"> 
+          <i class="fas fa-arrow-circle-right"></i>
+        </button></div>
+
+      </div>
+
+      <div class="search-results">
+        <ul class="results"></ul>
+
+        <p class="copyright">
+          &copy; Copyright by
+          <a class="twitter-link" target="_blank" href="03bddcb2ad48fefeb41aa62e2b429e19">Juliet George</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

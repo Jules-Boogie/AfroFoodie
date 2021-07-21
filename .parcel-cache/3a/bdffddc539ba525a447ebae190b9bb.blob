@@ -1,0 +1,6 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "PAGE_NUMBER_COUNT", function () {
+  return PAGE_NUMBER_COUNT;
+});
+const PAGE_NUMBER_COUNT = 3;
