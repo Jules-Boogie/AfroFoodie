@@ -13,26 +13,29 @@ const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
 const loadButton = document.querySelector('#load-more');
 
-
 let currentPage = 1;
 
 const getPageData = page => {
   let start = (page - 1) * config.PAGE_NUMBER_COUNT;
   let end = page * config.PAGE_NUMBER_COUNT;
 
-  if(end >= model.state.recipes.length) loadButton.classList.add('hidden')
+  if (end >= model.state.recipes.length) loadButton.classList.add('hidden');
   return model.state.recipes.slice(start, end);
 };
 
 const changePage = () => {
-  currentPage++
-  renderingAllRecipes(recipeContainer, getPageData(currentPage), '-all','beforeend')
+  currentPage++;
+  renderingAllRecipes(
+    recipeContainer,
+    getPageData(currentPage),
+    '-all',
+    'beforeend'
+  );
 };
 
 loadButton.addEventListener('click', changePage);
 
-
-const renderingAllRecipes = (location, data, type,position='afterbegin') => {
+const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
   data.forEach((recipe, index) => {
     const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
     <a href="/detail.html#${recipe.id}">
@@ -163,5 +166,5 @@ const renderTags = (data, location, type) => {
     location.insertAdjacentHTML('afterbegin', markup);
   });
 };
-renderTags(model.state.region.slice(0, 3), regionsDiv, '-region');
-renderTags(model.state.diet.slice(0, 3), dietDiv, '-diet');
+renderTags(model.state.region.slice(0, 4), regionsDiv, '-region');
+renderTags(model.state.diet.slice(0, 4), dietDiv, '-diet');
