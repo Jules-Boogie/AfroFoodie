@@ -16,7 +16,7 @@ const recipes = [
     time: '1:30',
     ratingsAverage: 4.0,
     ratingsQuantity: 1338,
-    tags: ['omnivore','rice','west-african'],
+    tags: ['omnivore','rice', 'west-african'],
     servings: 8,
     ingredients: [
       '1 (14-ounce) can whole peeled tomatoes with their juices',

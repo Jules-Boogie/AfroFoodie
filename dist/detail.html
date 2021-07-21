@@ -472,9 +472,8 @@ function showRecipe() {
      
         <div class="flex font-light text-gray-500">
         ${currentRecipe.tags.map(tag => {
-    return `<p class="text-xl text-gray-600 font-semibold">${tag}</p>`;
+    return `<p class="text-xl text-gray-600 font-semibold px-2"> ${tag} </p>`;
   })}
-        
         </div>
 
         <div
@@ -561,7 +560,7 @@ const recipes = [
     time: '1:30',
     ratingsAverage: 4.0,
     ratingsQuantity: 1338,
-    tags: ['omnivore', 'rice', 'west-african'],
+    tags: ['omnivore','rice','west-african'],
     servings: 8,
     ingredients: [
       '1 (14-ounce) can whole peeled tomatoes with their juices',

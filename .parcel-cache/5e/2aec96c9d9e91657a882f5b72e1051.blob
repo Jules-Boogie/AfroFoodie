@@ -1,38 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="src/css/styles.css" />
-    <script
-      defer
-      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
-      data-auto-a11y="true"
-    ></script>
-
-    <title>Detail</title>
-  </head>
-  <body>
-    <div class="main"></div>
-    <script>
-      import * as model from './src/js/model.js';
-
-      const main = document.querySelector('.main');
-      console.log(main);
-      function showRecipe() {
-        const id = window.location.hash.slice(1);
-        const currentRecipe = model.state.recipes[id];
-        const markup = `
+var _srcJsModelJs = require('./src/js/model.js');
+const main = document.querySelector('.main');
+console.log(main);
+function showRecipe() {
+  const id = window.location.hash.slice(1);
+  const currentRecipe = _srcJsModelJs.state.recipes[id];
+  const markup = `
     <div class="flex flex-wrap md bg-white items-center">
     <div class="bg-white w-full md:w-1/2 ">
       <div class="mx-32">
@@ -40,8 +12,9 @@
      
         <div class="flex font-light text-gray-500">
         ${currentRecipe.tags.map(tag => {
-          return `<p class="text-xl text-gray-600 font-semibold px-2"> ${tag} </p>`;
-        })}
+    return `<p class="text-xl text-gray-600 font-semibold px-2"> ${tag} </p>`;
+  })}
+        
         </div>
 
         <div
@@ -49,17 +22,17 @@
         >
         <h2 class="text-3xl text-black font-bold my-4"> Preparation </h2>
         ${currentRecipe.preparation.map(step => {
-          return` 
+    return ` 
             <p class="text-sm text-gray-900 font-semibold pt-2">${step}</p>
           `;
-        })}
+  })}
         </div>
         <div>
           <h2 class="text-3xl text-black font-bold my-4"> Ingredients </h2>
           <div>
           ${currentRecipe.ingredients.map(ing => {
-            return `<li class="text-xs text-gray-900 font-semibold pt-2">${ing}</li>`;
-          })}
+    return `<li class="text-xs text-gray-900 font-semibold pt-2">${ing}</li>`;
+  })}
           </div>
         </div>
   
@@ -76,22 +49,18 @@
       <div id="recipe-reviews">
         <h2 class="text-3xl text-black font-bold my-4"> Reviews </h2>
         ${currentRecipe.reviews.map(review => {
-          return `
+    return `
           <div class="pr-4">
           <span class="uppercase text-black">${review.writer}</span>
           <p class="text-sm text-gray-900 font-semibold pt-2">${review.review}</p>
         </div>
           `;
-        })}
+  })}
   
         </div>
     </div>
   </div>
     `;
-
-        main.insertAdjacentHTML('afterbegin', markup);
-      }
-      showRecipe();
-    </script>
-  </body>
-</html>
+  main.insertAdjacentHTML('afterbegin', markup);
+}
+showRecipe();
