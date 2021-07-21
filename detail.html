@@ -1,56 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="src/css/styles.css" />
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      data-auto-a11y="true"
+    ></script>
+
     <title>Detail</title>
-</head>
-<body>
-    <div class="flex flex-wrap md items-center h-screen">
-        <div class="bg-white w-full md:w-1/2 h-screen">
-          <div class="mx-32">
-            <h1 class="text-6xl font-bold mt-16">Tokyo</h1>
-  
-            <!-- country region island -->
-            <div class="flex mt-16 font-light text-gray-500">
-              <div class="pr-4">
-                <span class="uppercase">Country</span>
-                <p class="text-2xl text-gray-900 font-semibold pt-2">Japan</p>
-              </div>
-              <div class="pr-4">
-                <span class="uppercase">Region</span>
-                <p class="text-2xl text-gray-900 font-semibold pt-2">Kanto</p>
-              </div>
-              <div class="pr-4">
-                <span class="uppercase">island</span>
-                <p class="text-2xl text-gray-900 font-semibold pt-2">Honshu</p>
-              </div>
-            </div>
-  
-            <!-- description -->
-            <div
-              class="description w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm"
-            >
-              Tokyo, Japan’s busy capital, mixes the ultramodern and the
-              traditional, from neon-lit skyscrapers to historic temples. The
-              opulent Meiji Shinto Shrine is known for its towering gate and
-              surrounding woods. The Imperial Palace sits amid large public
-              gardens
-            </div>
-  
-            <button class="uppercase mt-5 text-sm font-semibold hover:underline">
-              read more
-            </button>
+  </head>
+  <body>
+    <div class="main"></div>
+    <script>
+      import * as model from './src/js/model.js';
+
+      const main = document.querySelector('.main');
+      console.log(main);
+      function showRecipe() {
+        const id = window.location.hash.slice(1);
+        const currentRecipe = model.state.recipes[id];
+        const markup = `
+    <div class="flex flex-wrap md bg-white items-center">
+    <div class="bg-white w-full md:w-1/2 ">
+      <div class="mx-32">
+        <h1 class="text-6xl text-black font-bold mt-8">${currentRecipe.name}</h1>
+     
+        <div class="flex font-light text-gray-500">
+        ${currentRecipe.tags.map(tag => {
+          return `<p class="text-xl text-gray-600 font-semibold">${tag}</p>`;
+        })}
+        
+        </div>
+
+        <div
+          class="description w-full sm: md:w-2/3 mt-16 text-gray-500 text-sm"
+        >
+        <h2 class="text-3xl text-black font-bold my-4"> Preparation </h2>
+        ${currentRecipe.preparation.map(step => {
+          return` 
+            <p class="text-sm text-gray-900 font-semibold pt-2">${step}</p>
+          `;
+        })}
+        </div>
+        <div>
+          <h2 class="text-3xl text-black font-bold my-4"> Ingredients </h2>
+          <div>
+          ${currentRecipe.ingredients.map(ing => {
+            return `<li class="text-xs text-gray-900 font-semibold pt-2">${ing}</li>`;
+          })}
           </div>
         </div>
-        <div class="bg-red-600 w-full md:w-1/2 h-screen">
-          <img
-            src="https://source.unsplash.com/7H77FWkK_x4/1600x900"
-            class="h-screen w-full"
-            alt=""
-          />
+  
+      </div>
+    </div>
+    
+    <div class="w-full md:w-1/2 absolute inset-y-0 right-0">
+      <img
+        id="recipe-image"
+        src=${currentRecipe.images[0]}
+        class="w-full object-cover h-screen"
+        alt=""
+      />
+      <div id="recipe-reviews">
+        <h2 class="text-3xl text-black font-bold my-4"> Reviews </h2>
+        ${currentRecipe.reviews.map(review => {
+          return `
+          <div class="pr-4">
+          <span class="uppercase text-black">${review.writer}</span>
+          <p class="text-sm text-gray-900 font-semibold pt-2">${review.review}</p>
         </div>
-      </div>  
-</body>
+          `;
+        })}
+  
+        </div>
+    </div>
+  </div>
+    `;
+
+        main.insertAdjacentHTML('afterbegin', markup);
+      }
+      showRecipe();
+    </script>
+  </body>
 </html>

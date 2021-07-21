@@ -454,11 +454,10 @@ const dietContainer = document.querySelector('#by-diet');
 const regionsContainer = document.querySelector('#by-regions');
 const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
-const recipe = document.querySelector('#recipe');
 const renderingAllRecipes = (location, data, type) => {
   data.forEach((recipe, index) => {
     const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
-    <a href="/detail.html">
+    <a href="/detail.html#${recipe.id}">
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
       <div data-id=${index} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${recipe.publisher.pic || 'https://www.allthetests.com/quiz22/picture/pic_1171831236_1.png'} />
@@ -516,7 +515,7 @@ const filter = e => {
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
-  allResultsTitle.innerHTML = `${e.target.dataset.id.toLocaleLowerCase().split('-')[0]} ${e.target.dataset.id.toLocaleLowerCase().split('-')[1] || ""} Recipes`;
+  allResultsTitle.innerHTML = `${e.target.dataset.id.toLocaleLowerCase().split('-')[0]} ${e.target.dataset.id.toLocaleLowerCase().split('-')[1] || ''} Recipes`;
   renderingAllRecipes(recipeContainer, filterResult.slice(0, 3));
 };
 searchBtn.addEventListener('click', search);
@@ -573,12 +572,15 @@ _parcelHelpers.export(exports, "state", function () {
 var _dataData = require('../data/data');
 var _dataDataDefault = _parcelHelpers.interopDefault(_dataData);
 const state = {
-  recipes: _dataDataDefault.default.recipes,
+  recipes: _dataDataDefault.default.recipes.map((recipe, id) => ({
+    ...recipe,
+    id: id
+  })),
   region: _dataDataDefault.default.region,
   diet: _dataDataDefault.default.diet
 };
 
-},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","../data/data":"3X9FW"}],"5gA8y":[function(require,module,exports) {
+},{"../data/data":"3X9FW","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
 "use strict";
 
 exports.interopDefault = function (a) {

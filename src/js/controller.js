@@ -10,12 +10,11 @@ const dietContainer = document.querySelector('#by-diet');
 const regionsContainer = document.querySelector('#by-regions');
 const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
-const recipe = document.querySelector('#recipe');
 
 const renderingAllRecipes = (location, data, type) => {
   data.forEach((recipe, index) => {
     const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
-    <a href="/detail.html">
+    <a href="/detail.html#${recipe.id}">
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
       <div data-id=${index} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${
@@ -55,7 +54,7 @@ const renderingAllRecipes = (location, data, type) => {
   });
 };
 //render all recipes
-renderingAllRecipes(recipeContainer, model.state.recipes.slice(0, 3),'-all');
+renderingAllRecipes(recipeContainer, model.state.recipes.slice(0, 3), '-all');
 
 //render top rated recipes
 const topRatedResults = model.state.recipes
@@ -63,7 +62,7 @@ const topRatedResults = model.state.recipes
   .sort((a, b) => b.ratingsQuantity - a.ratingsQuantity)
   .slice(0, 3)
   .reverse();
-renderingAllRecipes(topRatedContainer, topRatedResults,'-top');
+renderingAllRecipes(topRatedContainer, topRatedResults, '-top');
 
 //search algorithm
 const search = e => {
@@ -80,27 +79,30 @@ const search = e => {
   if (searchResult.length < 4) {
     loadBtn.classList.add('hidden');
   }
-  renderingAllRecipes(recipeContainer, searchResult.slice(0, 3),'-search');
+  renderingAllRecipes(recipeContainer, searchResult.slice(0, 3), '-search');
 };
 
-const filter = (e) => {
-  e.preventDefault()
-  console.log(e.target.dataset.id)
-  const filterResult = model.state.recipes.filter(recipe => recipe.tags.includes(e.target.dataset.id));
+const filter = e => {
+  e.preventDefault();
+  console.log(e.target.dataset.id);
+  const filterResult = model.state.recipes.filter(recipe =>
+    recipe.tags.includes(e.target.dataset.id)
+  );
   topRatedDiv.classList.add('hidden');
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
-  allResultsTitle.innerHTML = `${(e.target.dataset.id).toLocaleLowerCase().split('-')[0]} ${(e.target.dataset.id).toLocaleLowerCase().split('-')[1] || ""} Recipes`;
-  renderingAllRecipes(recipeContainer,filterResult.slice(0,3));
+  allResultsTitle.innerHTML = `${
+    e.target.dataset.id.toLocaleLowerCase().split('-')[0]
+  } ${e.target.dataset.id.toLocaleLowerCase().split('-')[1] || ''} Recipes`;
+  renderingAllRecipes(recipeContainer, filterResult.slice(0, 3));
 };
 
 searchBtn.addEventListener('click', search);
 regionsDiv.addEventListener('click', filter);
-dietDiv.addEventListener('click',filter);
+dietDiv.addEventListener('click', filter);
 
-
-const renderTags = (data, location,type) => {
+const renderTags = (data, location, type) => {
   data.forEach(reg => {
     const markup = `
       <div data-id=${reg.id}
@@ -135,11 +137,10 @@ const renderTags = (data, location,type) => {
                   </a>
                   <p>${reg.name}</p>
                 </div>
-      `
+      `;
 
     location.insertAdjacentHTML('afterbegin', markup);
   });
 };
-renderTags(model.state.region.slice(0,3), regionsDiv,'-region');
-renderTags(model.state.diet.slice(0,3), dietDiv,'-diet');
-
+renderTags(model.state.region.slice(0, 3), regionsDiv, '-region');
+renderTags(model.state.diet.slice(0, 3), dietDiv, '-diet');

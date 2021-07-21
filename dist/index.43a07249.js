@@ -590,7 +590,7 @@ const recipes = [
     time: '0:50',
     ratingsAverage: 5.0,
     ratingsQuantity: 9902,
-    tags: ['vegetarian', 'north-african', 'pescatarian', 'paleo'],
+    tags: ['vegetarian','north-african','pescatarian','paleo'],
     servings: 4,
     ingredients: [
       '3 tablespoons extra-virgin olive oil',

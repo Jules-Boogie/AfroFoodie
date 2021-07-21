@@ -1,4 +1,4 @@
-20608
+20609
 96C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\features\array\virtual\reduce.js121436361000000000 0
 87C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\caniuse-lite\data\regions\IS.js121436361000000000 0
 78C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\tough-cookie\README.md121436361000000000 0
@@ -26,7 +26,7 @@
 132C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\stylehacks\node_modules\postcss-selector-parser\postcss-selector-parser.d.ts121436361000000000 0
 89C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\es\promise\all-settled.js121436361000000000 0
 92C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\features\observable\index.js121436361000000000 0
-55C:\Users\georg\OneDrive\Desktop\AFroFoodie\package.json132713154401106613 0
+55C:\Users\georg\OneDrive\Desktop\AFroFoodie\package.json132713253380685601 0
 103C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\stylehacks\node_modules\postcss\docs\guidelines132681281144961074 1
 69C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\psl\README.md121436361000000000 0
 80C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\htmlparser2\node_modules132681281286565734 1
@@ -82,7 +82,7 @@
 152C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@parcel\node-resolver-core\test\fixture\node_modules\package-browser-alias\subfolder1\subfolder2132681281153107264 1
 76C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\encodeurl\HISTORY.md131610643090000000 0
 80C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\abortcontroller-polyfill132681281482098380 1
-47C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist132713218455966527 1
+47C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist132713253384075614 1
 91C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\thisStringValue.js121436361000000000 0
 65C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\hash-base132681281376518085 1
 131C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@parcel\transformer-posthtml\node_modules\posthtml-parser\.github\workflows132681281241749528 1
@@ -107,7 +107,7 @@
 114C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\css-declaration-sorter\node_modules\color-convert\index.js121436361000000000 0
 69C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\bn.js\LICENSE121436361000000000 0
 103C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\regenerate-unicode-properties\Script\Sharada.js121436361000000000 0
-54C:\Users\georg\OneDrive\Desktop\AFroFoodie\detail.html132713214637538294 0
+54C:\Users\georg\OneDrive\Desktop\AFroFoodie\detail.html132713252119235889 0
 100C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\plugin-proposal-optional-chaining\lib132681281124450113 1
 70C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\string_decoder132681281389023364 1
 71C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\json-source-map132681281456267618 1
@@ -200,7 +200,7 @@
 104C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\csso\node_modules\mdn-data\css\types.schema.json121436361000000000 0
 110C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-merge-rules\node_modules\has-flag\package.json132681281421577391 0
 112C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\jsdom\lib\jsdom\living\generated\AssignedNodesOptions.js121436361000000000 0
-52C:\Users\georg\OneDrive\Desktop\AFroFoodie\README.md132679108203712979 0
+52C:\Users\georg\OneDrive\Desktop\AFroFoodie\README.md132713238606151437 0
 112C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\csso\node_modules\css-tree\lib\syntax\node\Percentage.js121436361000000000 0
 68C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\cli-spinners132681281477468398 1
 81C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\util-deprecate\browser.js130887165700000000 0
@@ -239,7 +239,7 @@
 51C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\data132688361433642659 1
 103C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\highlight.js\scss\atelier-sulphurpool-dark.scss121436361000000000 0
 120C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-convert-values\node_modules\color-convert\conversions.js121436361000000000 0
-50C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\img132688392836531715 1
+50C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\img132713238447604989 1
 84C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\uri-js\dist\es5\uri.all.d.ts121436361000000000 0
 89C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\features\iterator\from.js121436361000000000 0
 72C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\merge2\README.md121436361000000000 0
@@ -253,7 +253,6 @@
 140C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-merge-rules\node_modules\postcss-selector-parser\dist\selectors\universal.js121436361000000000 0
 96C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\url\node_modules\querystring\.travis.yml130069927140000000 0
 108C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-params\node_modules\postcss\README.md121436361000000000 0
-63C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\astring132681281478758375 1
 80C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\log-symbols\package.json132681281387743344 0
 86C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\es\reflect\own-keys.js121436361000000000 0
 72C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\bytes\History.md131486897340000000 0
@@ -270,7 +269,7 @@
 71C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\unquote\LICENSE131580428010000000 0
 84C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\es\string\italics.js121436361000000000 0
 70C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\jsbn\README.md131313589580000000 0
-63C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\js\controller.js132713218454636379 0
+63C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\js\controller.js132713249915116444 0
 124C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-timing-functions\node_modules\color-name\README.md131339336430000000 0
 79C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\signal-exit\LICENSE.txt121436361000000000 0
 108C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-merge-rules\node_modules\postcss\lib\node.js121436361000000000 0
@@ -344,6 +343,15 @@
 88C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\resolve\test\module_dir\ymodules132681281189068222 1
 113C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\plugin-syntax-logical-assignment-operators\LICENSE121436361000000000 0
 65C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\img\background.jpg132679599138103097 0
+68C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\array-unique132681281481578386 1
+66C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\oauth-sign132681281445086059 1
+83C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\purgecss\node_modules\chalk132681281403468642 1
+63C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\img\darkmode.PNG132713238448174935 0
+90C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\sprintf-js\dist\sprintf.min.js.map130772004810000000 0
+113C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\regenerate-unicode-properties\Script_Extensions\Hatran.js121436361000000000 0
+100C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\unset-value\node_modules\has-values\index.js130717226900000000 0
+92C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@parcel\diagnostic\lib\diagnostic.js121436361000000000 0
+69C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\normalize-url132681281448191768 1
 63C:\Users\georg\OneDrive\Desktop\AFroFoodie\src\img\logoDark.png132681439911282184 0
 95C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\stable\array\virtual\entries.js121436361000000000 0
 122C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-selectors\node_modules\postcss\lib\map-generator.js121436361000000000 0
@@ -548,9 +556,9 @@
 89C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\modules\esnext.set.map.js121436361000000000 0
 91C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\vm-browserify\example\run\bundle.js121436361000000000 0
 67C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\array-equal132681281481928373 1
-68C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\array-unique132681281481578386 1
 60C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\asn1132681281399118584 1
 68C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\setimmediate132681281395618647 1
+63C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\astring132681281478758375 1
 122C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\unset-value\node_modules\has-value\node_modules\isobject\README.md131060918360000000 0
 127C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-gradients\node_modules\postcss\docs\guidelines\plugin.md121436361000000000 0
 65C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\rgb-regex132681281399728583 1
@@ -1156,12 +1164,6 @@
 91C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\modules\es.object.freeze.js121436361000000000 0
 83C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\public-encrypt\package.json132681281373342836 0
 77C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-url132681281391693361 1
-104C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\purgecss\node_modules\color-convert\CHANGELOG.md121436361000000000 0
-118C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\abortcontroller-polyfill\dist\abortcontroller-polyfill-only.js121436361000000000 0
-116C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-positions\node_modules\chalk\index.js.flow121436361000000000 0
-111C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-gradients\node_modules\has-flag\index.js131593941750000000 0
-62C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\split2132681281373972853 1
-74C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\vm-browserify\test132681281106504036 1
 91C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\w3c-xmlserializer\lib\attributes.js121436361000000000 0
 96C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-wrap-function\package.json132681281384143407 0
 145C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-selectors\node_modules\postcss-selector-parser\dist\selectors\universal.js121436361000000000 0
@@ -2182,7 +2184,7 @@
 137C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-params\node_modules\chalk\node_modules\supports-color\package.json132681281418451094 0
 66C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\is-windows132681281456732885 1
 93C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\modules\esnext.math.fscale.js121436361000000000 0
-69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.43a07249.js.map132713218455956527 0
+69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.43a07249.js.map132713253384055629 0
 89C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\source-map\dist\source-map.min.js131511695990000000 0
 80C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\util-deprecate\README.md130614195410000000 0
 113C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\stylehacks\node_modules\postcss-selector-parser\README.md121436361000000000 0
@@ -2316,13 +2318,6 @@
 81C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\cssom\lib\CSSMediaRule.js121436361000000000 0
 110C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\cssnano-preset-default\node_modules\chalk\templates.js121436361000000000 0
 86C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\timers-browserify\CHANGELOG.md121436361000000000 0
-66C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\oauth-sign132681281445086059 1
-83C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\purgecss\node_modules\chalk132681281403468642 1
-90C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\sprintf-js\dist\sprintf.min.js.map130772004810000000 0
-113C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\regenerate-unicode-properties\Script_Extensions\Hatran.js121436361000000000 0
-100C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\unset-value\node_modules\has-values\index.js130717226900000000 0
-92C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@parcel\diagnostic\lib\diagnostic.js121436361000000000 0
-69C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\normalize-url132681281448191768 1
 87C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\caniuse-lite\data\regions\CO.js121436361000000000 0
 116C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-discard-comments\node_modules\color-convert\index.js121436361000000000 0
 68C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\range-parser132681281400858610 1
@@ -2690,6 +2685,12 @@
 70C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\source-map-url132681281389583366 1
 128C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\stylehacks\node_modules\postcss-selector-parser\dist\selectors\string.js121436361000000000 0
 121C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\uncss\node_modules\postcss-selector-parser\dist\selectors\root.js121436361000000000 0
+104C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\purgecss\node_modules\color-convert\CHANGELOG.md121436361000000000 0
+118C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\abortcontroller-polyfill\dist\abortcontroller-polyfill-only.js121436361000000000 0
+116C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-positions\node_modules\chalk\index.js.flow121436361000000000 0
+111C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-minify-gradients\node_modules\has-flag\index.js131593941750000000 0
+62C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\split2132681281373972853 1
+74C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\vm-browserify\test132681281106504036 1
 88C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\stable\typed-array\of.js121436361000000000 0
 107C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-modules\node_modules\color-convert\route.js121436361000000000 0
 100C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\snapdragon\node_modules\source-map\README.md131369414900000000 0
@@ -2804,9 +2805,9 @@
 125C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\uncss\node_modules\postcss-selector-parser\dist\__tests__\comments.js121436361000000000 0
 89C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\SameValueZero.js121436361000000000 0
 62C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\unpipe132681281377378101 1
-78C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\xml-name-validator\lib132681281095704067 1
 108C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\plugin-proposal-class-properties\lib\index.js121012626000000000 0
 74C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\lodash\fp\clamp.js121436361000000000 0
+78C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\xml-name-validator\lib132681281095704067 1
 140C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-merge-rules\node_modules\postcss-selector-parser\dist\selectors\namespace.js121436361000000000 0
 77C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\get-intrinsic\LICENSE121436361000000000 0
 81C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\lodash\_baseAggregator.js121436361000000000 0
@@ -3218,13 +3219,13 @@
 77C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\ws\lib\buffer-util.js121436361000000000 0
 82C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\serve-handler\src\index.js121436361000000000 0
 122C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-whitespace\node_modules\postcss-value-parser\lib132681281173607696 1
-78C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\ws\lib\event-target.js121436361000000000 0
 81C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\lodash\matchesProperty.js121436361000000000 0
 113C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-discard-comments\node_modules\postcss\lib\rule.js121436361000000000 0
 118C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-reduce-initial\node_modules\postcss\lib\declaration.js121436361000000000 0
 90C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\connect\node_modules\debug\node.js131419593830000000 0
 105C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\uncss\node_modules\postcss-selector-parser\API.md121436361000000000 0
 93C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\resolve\test\node_path\x\ccc\index.js121436361000000000 0
+78C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\ws\lib\event-target.js121436361000000000 0
 103C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\regenerate-unicode-properties\Script\Sogdian.js121436361000000000 0
 115C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\modifications\prependToMemberExpression.js121012626000000000 0
 100C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\uncss\node_modules\supports-color\browser.js121436361000000000 0
@@ -6302,7 +6303,7 @@
 107C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\parse5\lib\extensions\error-reporting\mixin-base.js121436361000000000 0
 109C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-modules\node_modules\postcss\lib\warn-once.js121436361000000000 0
 93C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\es\object\set-prototype-of.js121436361000000000 0
-70C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.928ba5ce.css.map132713218455946523 0
+70C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.928ba5ce.css.map132713253384045633 0
 84C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\resolve\test\node_path\y\ccc132681281199973465 1
 93C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\resolve\test\node_path\y\ccc\index.js121436361000000000 0
 93C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\resolve\test\node_path\y\bbb\index.js121436361000000000 0
@@ -7743,8 +7744,8 @@
 118C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-unique-selectors\node_modules\postcss\lib\postcss.d.ts121436361000000000 0
 97C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\modifications\typescript132681281167177799 1
 122C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-merge-rules\node_modules\postcss-selector-parser\README.md121436361000000000 0
-115C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-unique-selectors\node_modules\postcss\lib\result.js121436361000000000 0
 116C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-unicode\node_modules\has-flag\package.json132681281407404409 0
+115C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-unique-selectors\node_modules\postcss\lib\result.js121436361000000000 0
 110C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-normalize-url\node_modules\color-name\index.js131446304070000000 0
 84C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\postcss-colormin\LICENSE-MIT121436361000000000 0
 73C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\jsesc\man\jsesc.1121436361000000000 0
@@ -11962,7 +11963,7 @@
 92C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\coa\node_modules\ansi-styles\license131408182550000000 0
 74C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\ee-first\README.md130770514230000000 0
 97C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\miller-rabin\node_modules\bn.js\README.md121436361000000000 0
-65C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.250b04c7.js132713218455896523 0
+65C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.250b04c7.js132713253383985631 0
 79C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\micromatch\CHANGELOG.md121436361000000000 0
 75C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\lodash\fp\nthArg.js121436361000000000 0
 75C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\micromatch\index.js121436361000000000 0
@@ -15261,7 +15262,7 @@
 87C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\ArrayCreate.js121436361000000000 0
 91C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\core-js\internals\array-for-each.js121436361000000000 0
 102C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\CompletePropertyDescriptor.js121436361000000000 0
-69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.250b04c7.js.map132713218455956527 0
+69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.250b04c7.js.map132713253384045633 0
 94C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\CopyDataProperties.js121436361000000000 0
 94C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\CreateDataProperty.js121436361000000000 0
 86C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\es-abstract\2019\CreateHTML.js121436361000000000 0
@@ -19843,7 +19844,7 @@
 114C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\modifications\appendToMemberExpression.js121012626000000000 0
 92C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\definitions\core.js121012626000000000 0
 93C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\definitions\index.js121012626000000000 0
-69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\logoDark.84d82f06.png132713218455836525 0
+69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\logoDark.84d82f06.png132713253383775621 0
 91C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\definitions\jsx.js121012626000000000 0
 92C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\definitions\misc.js121012626000000000 0
 98C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\types\lib\definitions\typescript.js121012626000000000 0
@@ -20411,7 +20412,7 @@
 123C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-compilation-targets\node_modules\semver\bin\semver.js121436361000000000 0
 114C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-compilation-targets\node_modules\.bin\semver132681281490968901 0
 109C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-compilation-targets\lib\filter-items.js121012626000000000 0
-58C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.html132713218455876595 0
+58C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.html132713253383975720 0
 104C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-compilation-targets\lib\options.js121012626000000000 0
 104C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-compilation-targets\lib\targets.js121012626000000000 0
 116C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\@babel\helper-builder-binary-assignment-operator-visitor\lib132681281125250112 1
@@ -20602,8 +20603,8 @@
 69C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\.bin\uuid.cmd132681281503718862 0
 69C:\Users\georg\OneDrive\Desktop\AFroFoodie\node_modules\.bin\uuid.ps1132681281503718862 0
 71C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\background.536dca42.PNG132688377576121776 0
-65C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.43a07249.js132713218455906553 0
+65C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.43a07249.js132713253384015622 0
 65C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.787d9647.js132681321576820137 0
 69C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.787d9647.js.map132681321576890154 0
-66C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.928ba5ce.css132713218455886569 0
+66C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\index.928ba5ce.css132713253383975720 0
 70C:\Users\georg\OneDrive\Desktop\AFroFoodie\dist\logoLight.c69b13f5.png132681438478530623 0

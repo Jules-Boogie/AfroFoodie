@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,600,700" rel="stylesheet">
+
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/index.HASH_REF_1f4ae320034955e4a6b30ca3928ba5ce.css">
+    <script defer="" src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" data-auto-a11y="true"></script>
+    <script defer="" src="/index.HASH_REF_d38df14b60da2fedc816982643a07249.js"></script>
+    <script defer="" src="/index.HASH_REF_b04bb861068a82f334f5adba4bf08260.js"></script>
+    <script defer="" src="/index.HASH_REF_bacbeddf5880437d312a46d99e8dcc19.js"></script>
+    <title>Detail</title>
+  </head>
+  <body>
+    <div id="ttext">
+
+    </div>
+  </body>
+</html>
