@@ -9,4 +9,4 @@
 
 ## App Photo (Dark Mode)
 
-[darkmode](https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/darkmode.PNG)
+![darkmode](https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/darkmode.PNG)
