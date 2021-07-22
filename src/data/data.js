@@ -16,7 +16,7 @@ const recipes = [
     time: '1:30',
     ratingsAverage: 4.0,
     ratingsQuantity: 1338,
-    tags: ['omnivore','rice','west-african'],
+    tags: ['omnivore', 'rice', 'west-african'],
     servings: 8,
     ingredients: [
       '1 (14-ounce) can whole peeled tomatoes with their juices',
@@ -89,7 +89,7 @@ const recipes = [
     country: 'Nigeria',
     images: [
       'https://www.myactivekitchen.com/wp-content/uploads/2019/05/nigerian-puff-puff-recipe-how-to-make-puff-puff-img-1.jpg',
-      'https://www.localguidesconnect.com/t5/image/serverpage/image-id/524562iE758F9B2088BEC23/image-size/large?v=v2&px=999',
+      'https://simshomekitchen.com/wp-content/uploads/2020/03/puff-puff-pepper.png',
     ],
     time: '1:5',
     ratingsAverage: 0,
@@ -146,7 +146,7 @@ const recipes = [
     time: '0:50',
     ratingsAverage: 5.0,
     ratingsQuantity: 9902,
-    tags: ['vegetarian','north-african','pescatarian','paleo'],
+    tags: ['vegetarian', 'north-african', 'pescatarian', 'paleo'],
     servings: 4,
     ingredients: [
       '3 tablespoons extra-virgin olive oil',
@@ -1128,20 +1128,55 @@ const themes = [
   },
 ];
 
-
 const region = [
-  {name:"West Africa", id:"west-african", img:"https://cheflolaskitchen.com/wp-content/uploads/2019/12/DSC0276-okro-pepper-soup-500x500.jpg"},
-  {name:"North Africa", id:"north-african", img:"http://res.cloudinary.com/dsmafmqwi/image/upload/v1615494093/virtualtrips/tours/muvfwdbjfsmbrxpwcmgz.jpg"},
-  {name:"South Africa", id:"south-african", img:"https://www.thespruceeats.com/thmb/vhj9QlZ3qIhlWw0ps_dd4khR3rM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bobotie-and-yellow-rice--south-african-cuisine--805248010-5ac23a47ae9ab800377f96a0.jpg"},
-  {name:"Caribbean", id:"caribbean", img:"https://legacy.travelnoire.com/wp-content/uploads/2019/03/48374641_2678424255508970_4701473533815947264_n.jpg"},
-  {name:"East Africa", id:"east-african", img:"https://aot-wpengine.netdna-ssl.com/wp-content/uploads/2013/07/east-african-food.jpg"},
-]
+  {
+    name: 'West Africa',
+    id: 'west-african',
+    img: 'https://cheflolaskitchen.com/wp-content/uploads/2019/12/DSC0276-okro-pepper-soup-500x500.jpg',
+  },
+  {
+    name: 'North Africa',
+    id: 'north-african',
+    img: 'http://res.cloudinary.com/dsmafmqwi/image/upload/v1615494093/virtualtrips/tours/muvfwdbjfsmbrxpwcmgz.jpg',
+  },
+  {
+    name: 'South Africa',
+    id: 'south-african',
+    img: 'https://www.thespruceeats.com/thmb/vhj9QlZ3qIhlWw0ps_dd4khR3rM=/960x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/bobotie-and-yellow-rice--south-african-cuisine--805248010-5ac23a47ae9ab800377f96a0.jpg',
+  },
+  {
+    name: 'Caribbean',
+    id: 'caribbean',
+    img: 'https://legacy.travelnoire.com/wp-content/uploads/2019/03/48374641_2678424255508970_4701473533815947264_n.jpg',
+  },
+  {
+    name: 'East Africa',
+    id: 'east-african',
+    img: 'https://aot-wpengine.netdna-ssl.com/wp-content/uploads/2013/07/east-african-food.jpg',
+  },
+];
 
 const diet = [
-  {name:"Omnivore", id:"omnivore", img:"https://kuulpeeps.com/wp-content/uploads/2020/09/EC060CF3-15E6-41E6-9C34-5975ADC10042.jpeg"},
-  {name:"Pescetarian", id:"pescetarian", img:'https://rstda.org/wp-content/uploads/2020/03/images-2020-03-22T230304.620.jpeg'},
-  {name:"Vegetarian", id:"vegetarian", img:"https://cdn.vox-cdn.com/thumbor/xhU-iXNOxbZ2Pcq0PZ6OiQu3QRI=/0x135:602x587/1400x1400/filters:focal(0x135:602x587):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/47205638/adey_abeba.0.0.png"},
-  {name:"Vegan", id:"vegan", img:"https://images.squarespace-cdn.com/content/v1/542a1eece4b07e544a693b04/1524026741164-JFIZ17PUEZK8SCMEAVFP/ke17ZwdGBToddI8pDm48kOQ3RhYac-aNSkiHO0RlES1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxZY5_tqj_k7S_qX7Glx3bDyE9LkMUO-anM9bzUgQ0GyPNTvk9QNqtpuBq74DSlQQ0/image-asset.jpeg?format=750w" }
-]
+  {
+    name: 'Omnivore',
+    id: 'omnivore',
+    img: 'https://kuulpeeps.com/wp-content/uploads/2020/09/EC060CF3-15E6-41E6-9C34-5975ADC10042.jpeg',
+  },
+  {
+    name: 'Pescetarian',
+    id: 'pescetarian',
+    img: 'https://rstda.org/wp-content/uploads/2020/03/images-2020-03-22T230304.620.jpeg',
+  },
+  {
+    name: 'Vegetarian',
+    id: 'vegetarian',
+    img: 'https://cdn.vox-cdn.com/thumbor/xhU-iXNOxbZ2Pcq0PZ6OiQu3QRI=/0x135:602x587/1400x1400/filters:focal(0x135:602x587):format(png)/cdn.vox-cdn.com/uploads/chorus_image/image/47205638/adey_abeba.0.0.png',
+  },
+  {
+    name: 'Vegan',
+    id: 'vegan',
+    img: 'https://images.squarespace-cdn.com/content/v1/542a1eece4b07e544a693b04/1524026741164-JFIZ17PUEZK8SCMEAVFP/ke17ZwdGBToddI8pDm48kOQ3RhYac-aNSkiHO0RlES1Zw-zPPgdn4jUwVcJE1ZvWQUxwkmyExglNqGp0IvTJZUJFbgE-7XRK3dMEBRBhUpxZY5_tqj_k7S_qX7Glx3bDyE9LkMUO-anM9bzUgQ0GyPNTvk9QNqtpuBq74DSlQQ0/image-asset.jpeg?format=750w',
+  },
+];
 
-module.exports = {recipes, region, diet};
+module.exports = { recipes, region, diet };
