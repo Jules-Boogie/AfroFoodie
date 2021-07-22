@@ -2,10 +2,6 @@
  An offline application to store and use recipes. 
 
 
-### App Gif(Search Feature)
-<img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/AfroFoodie__%20Search%20for%20Afro%20Inspired%20recipes.gif"  width="100%" >
-
-
 ###  App Photo (Dark Mode)
 
 <img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/darkmode.PNG"  width="100%" >
