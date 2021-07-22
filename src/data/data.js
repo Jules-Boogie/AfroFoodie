@@ -98,7 +98,7 @@ const recipes = [
     servings: 14,
     ingredients: [
       '3 cups flour (375 grams)',
-      '4 teaspoons [b]quick rise yeast [/b]',
+      '4 teaspoons quick rise yeast',
       '2/3 – 1 cup sugar (133 -201 grams)',
       '1/2 tsp nutmeg',
       '2 cups lukewarm water',

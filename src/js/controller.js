@@ -1,5 +1,6 @@
 import * as model from './model';
 import * as config from './config';
+
 const recipeContainer = document.querySelector('#all-results');
 const topRatedContainer = document.querySelector('#top-rated');
 const loadBtn = document.querySelector('#load-more');
@@ -12,6 +13,7 @@ const regionsContainer = document.querySelector('#by-regions');
 const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
 const loadButton = document.querySelector('#load-more');
+const contentDiv = document.querySelector('.bodyody');
 
 let currentPage = 1;
 
@@ -37,27 +39,29 @@ loadButton.addEventListener('click', changePage);
 
 const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
   data.forEach((recipe, index) => {
-    const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent cursor-pointer bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
-    <a href="/detail.html#${recipe.id}">
+    const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent  bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
+   
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
-      <div data-id=${index} class="flex items-center">
+      <div data-id=${recipe.id} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${
           recipe.publisher.pic ||
           'https://www.allthetests.com/quiz22/picture/pic_1171831236_1.png'
         } />
-        <h3 class="capitalize ml-2 hover:underline cursor-pointer text-sm font-semibold text-shadow">${recipe.publisher.name.toLocaleLowerCase()}</h3>
+        <a href=${
+          recipe.publisher.social
+        } target="_blank" class="capitalize ml-2 hover:underline cursor-pointer text-sm font-semibold text-shadow">${recipe.publisher.name.toLocaleLowerCase()}</a>
       </div>
       <div class="flex items-center">
-        <button data-id=${index} id="save-btn" class="focus:outline-none btn  ml-8 w-12 h-full rounded-full text-white">
-          <i class="hover:text-red-600 far fa-heart"></i>
-        </button>
+       
+          <i data-id=${recipe.id} class="hover:text-red-600 far fa-heart ${recipe.bookmarked ? 'cursor-not-allowed bg-red-500': ''}" ></i>
+      
       </div>
      
     </div>
-
+    <a href="/detail.html#${recipe.id}">
       <img src=${
         recipe.images[0]
-      } alt="image1" class="w-full h-48 object-cover mb-2">
+      } alt="image1" class="w-full cursor-pointer h-48 object-cover mb-2">
       <div class="p-3">
       <p class="mb-3 tracking-wide text-base text-shadow">
         <i class=" text-red-600 fas fa-star"></i>
@@ -168,3 +172,25 @@ const renderTags = (data, location, type) => {
 };
 renderTags(model.state.region.slice(0, 4), regionsDiv, '-region');
 renderTags(model.state.diet.slice(0, 4), dietDiv, '-diet');
+
+const addBookmarksController = e => {
+  //;
+  //update recipe view
+  e.preventDefault();
+  alert('click');
+  //
+  // update state
+  //;
+};
+
+contentDiv.addEventListener('click', function (e) {
+  try{
+    let recipe = model.state.recipes[e.target.dataset.id];
+    model.addBookmarks(recipe)
+    e.target.classList.toggle('cursor-not-allowed bg-red-500');
+  }catch(err){
+    console.log(err)
+  }finally{
+    console.log(model.state.bookmarks)
+  }
+});
