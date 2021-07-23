@@ -2,10 +2,11 @@
   "name": "AfroFoodie",
   "version": "1.0.0",
   "description": "A web application that stores recipes.",
-  "main": "index.html",
+  "default": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "parcel index.html detail.html"
+    "start": "parcel index.html detail.html",
+    "build": "parcel build index.html detail.html --dist-dir ./dist"
   },
   "repository": {
     "type": "git",

@@ -239,6 +239,7 @@ bookmarksButton.addEventListener('click', function (e) {
 const changeMode = () => {
   if (model.state.mode.dark) {
     document.body.classList.add('bg-gray-100', 'text-black');
+    document.body.classList.remove('text-white');
     document.body.style.backgroundColor = 'white';
     inputEl.style.backgroundColor = 'white';
     logoEl.src =

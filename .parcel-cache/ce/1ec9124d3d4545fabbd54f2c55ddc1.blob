@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="4693a017c4ba4469d7f0f76643911f1e" rel="stylesheet">
+
+    <link href="3b79249042cdc3d30dede4889819ff7e" rel="stylesheet">
+    <link rel="stylesheet" href="c5b5debcefc958ac52e3aafe9f232e0b">
+    <script defer="" src="2c716e88c2683de474b17253bedd9d0e" data-auto-a11y="true"></script>
+    <script defer="" src="ded84beb30c4970a56ca6bb316ba914f"></script>
+    <script defer="" src="988cef4f022fecfd0b92b1d5314d2ee3"></script>
+    <script defer="" src="5fc6d9884d72cbb874b22fb60f7e4ea2"></script>
+    <title>AfroFoodie// Search for Afro Inspired recipes</title>
+  </head>
+
+  <body>
+    <header class="header mb-12 px-4 flex justify-between items-center">
+      <div class="relative h-32">
+        <a href="6e234a58d77b31a5ce8cbcbe7f331ce3">
+          <img class="logo h-32" src="bc74c0a8ef6608dfe4221f7660f254f0" alt="Logo">
+        </a>
+      </div>
+
+      <form class="border relative h-10 rounded-full py-2 px-6 hover:shadow-lg">
+        <input name="search" type="text" placeholder="Search Recipes">
+        <button id="search-btn" class="
+            hover:bg-gray-600
+            focus:outline-none
+            btn
+            ml-8
+            w-12
+            h-full
+            rounded-full
+          ">
+          <i class="fas fa-search"></i>
+        </button>
+      </form>
+      <nav class="nav">
+        <ul class="nav__list flex">
+          <div class="relative h-10 rounded-full py-2 px-4 hover:shadow-lg">
+            <button class="mode focus:outline-none text-md font-semibold text-shadow">
+              DarkMode
+            </button>
+          </div>
+          <div class="
+              border
+              relative
+              h-10
+              rounded-full
+              py-2
+              px-4
+              hover:shadow-lg
+              ml-8
+            ">
+            <button id="my-recipes" class="focus:outline-none text-md font-semibold text-shadow">
+              <i class="fas fa-bars"></i>
+              My Recipes
+            </button>
+          </div>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="bodyody h-full w-full">
+      <div id="by-regions" class="mb-12 px-4">
+        <h2 class="text-2xl font-bold flex justify-center">
+          Recipes by Regions
+        </h2>
+        <!-- <div class="mx-4 flex"> -->
+        <!-- <i class="cursor-pointer self-center fas fa-arrow-circle-left"></i> -->
+        <div id="recipes-region__div" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <!-- <i class="cursor-pointer self-center fas fa-arrow-circle-right"></i> -->
+        <!-- </div> -->
+      </div>
+
+      <div id="top-rated__div" class="mb-12 px-4">
+        <h2 class="text-2xl font-bold flex justify-center">
+          Top Rated Recipes
+        </h2>
+        <!-- <i class="fas fa-arrow-circle-left"></i> -->
+        <div id="top-rated" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <!-- <i class="fas fa-arrow-circle-right"></i> -->
+      </div>
+      <div id="by-diet" class="mb-12 px-4">
+        <h2 class="text-2xl font-bold flex justify-center">Recipes by Diet</h2>
+        <!-- <i class="fas fa-arrow-circle-left"></i> -->
+        <div id="diet__div" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <!-- <i class="fas fa-arrow-circle-right"></i> -->
+      </div>
+
+      <div id="recipes-result" class="px-4">
+        <h2 id="all-results-title" class="capitalize text-2xl font-bold flex justify-center">
+          All Recipes
+        </h2>
+
+        <div id="all-results" class="bg-image w-full flex justify-center items-center gap-3 py-5"></div>
+        <div class="text-center">
+          <button class="
+              relative
+              h-10
+              rounded-full
+              py-2
+              px-4
+              hover:shadow-lg
+              focus:outline-none
+              text-md
+              font-semibold
+              text-shadow
+            " id="load-more">
+            load more
+          </button>
+        </div>
+      </div>
+
+      <div class="search-results">
+        <ul class="results"></ul>
+
+        <p class="copyright">
+          &copy; Copyright by
+          <a class="twitter-link" target="_blank" href="e2f5dead68e5926a46fe463334cad34f">Juliet George</a>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
