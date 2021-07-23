@@ -2,6 +2,16 @@
 
 An offline application to store and use recipes.
 
+
+## Technologies Used
+| Technologies | Description  |
+|---------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------:|
+| [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)                                     |            JavaScript is a prototype-based, multi-paradigm, single-threaded, dynamic language, supporting object-oriented, imperative, and declarative (e.g. functional programming) styles               |
+| [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)                |   CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.               |
+| [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)                |   HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and structure of web content.                |
+| [FireBase Realtime Database](https://firebase.google.com/)                |  A realtime database to store, view and get data. |
+| [TailWindCSS](https://tailwindcss.com/docs) | A utility-first CSS framework packed with classes like flex, pt-4, text-center and rotate-90 that can be composed to build any design, directly in your markup.|
+
 ### App Photos
 <img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/AfroFoodie__%20Search%20for%20Afro%20Inspired%20recipes.gif"  width="100%" >
 <img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/AfroFoodie__%20Search%20for%20Afro%20Inspired%20recipes%20(2).gif"  width="100%" >
