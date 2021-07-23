@@ -1,5 +1,6 @@
 import * as model from './model';
 import * as config from './config';
+
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import firebase from 'firebase/app';
 // If you are using v7 or any earlier version of the JS SDK, you should import firebase using namespace import
@@ -26,6 +27,9 @@ const dietDiv = document.querySelector('#diet__div');
 const loadButton = document.querySelector('#load-more');
 const bookmarksButton = document.querySelector('#my-recipes');
 const contentDiv = document.querySelector('.bodyody');
+const modeButton = document.querySelector('.mode');
+const logoEl = document.querySelector('.logo');
+const inputEl = document.querySelector('input');
 
 firebase.initializeApp(config.firebaseConfig);
 
@@ -42,9 +46,15 @@ const getPageData = (data, page) => {
 const changePage = () => {
   currentPage++;
   model.getRecipes().then(response => {
+    let temp = response.map((recipe, id) => ({ ...recipe, id: id }));
+    temp.forEach(data => {
+      if (model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
+        data.bookmarked = true;
+      }
+    });
     renderingAllRecipes(
       recipeContainer,
-      getPageData(response, currentPage),
+      getPageData(temp, currentPage),
       '-all',
       'beforeend'
     );
@@ -55,7 +65,7 @@ loadButton.addEventListener('click', changePage);
 
 const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
   data.forEach((recipe, index) => {
-    const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent  bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
+    const markup = ` <div id=recipe data-id=${index} class="slide${type} m-2 backdrop w-10/12 md:w-1/4 hover:bg-transparent  bg-white bg-opacity-10 rounded border border-gray-300 shadow-lg">
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
       <div data-id=${recipe.id} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${
@@ -107,7 +117,7 @@ const topRatedReturn = data => {
   return (topRatedResults = data
     .filter(recipe => recipe.ratingsAverage >= 4)
     .sort((a, b) => b.ratingsQuantity - a.ratingsQuantity)
-    .slice(0, 3)
+    .slice(0, 4)
     .reverse());
 };
 
@@ -143,7 +153,7 @@ const filter = e => {
   allResultsTitle.innerHTML = `${
     e.target.dataset.id.toLocaleLowerCase().split('-')[0]
   } ${e.target.dataset.id.toLocaleLowerCase().split('-')[1] || ''} Recipes`;
-  renderingAllRecipes(recipeContainer, filterResult.slice(0, 3));
+  renderingAllRecipes(recipeContainer, filterResult.slice(0, 4));
 };
 
 searchBtn.addEventListener('click', search);
@@ -168,11 +178,11 @@ const renderTags = (data, location, type) => {
                     bg-white bg-opacity-10
                     rounded-md
                     p-3
-                    text-white
+                  
                     border border-gray-300
                     shadow-lg
                     cursor-pointer
-                    m-4
+                    m-2
                   "
                 >
                   <a>
@@ -190,8 +200,8 @@ const renderTags = (data, location, type) => {
     location.insertAdjacentHTML('afterbegin', markup);
   });
 };
-renderTags(model.state.region.slice(0, 4), regionsDiv, '-region');
-renderTags(model.state.diet.slice(0, 4), dietDiv, '-diet');
+renderTags(model.state.region, regionsDiv, '-region');
+renderTags(model.state.diet, dietDiv, '-diet');
 
 contentDiv.addEventListener('click', function (e) {
   // e.preventDefault();
@@ -226,7 +236,47 @@ bookmarksButton.addEventListener('click', function (e) {
   renderingAllRecipes(recipeContainer, model.state.bookmarks);
 });
 
+const changeMode = () => {
+  if (model.state.mode.dark) {
+    document.body.classList.add('bg-gray-100', 'text-black');
+    document.body.style.backgroundColor = 'white';
+    inputEl.style.backgroundColor = 'white';
+    logoEl.src =
+      'https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/logoLight.png?raw=true';
+    modeButton.innerHTML = 'LightMode';
+    model.setState('light', true);
+    model.setState('dark', false);
+  } else {
+    document.body.classList.remove('bg-gray-100', 'text-black');
+    logoEl.src =
+      'https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/logoDark.png?raw=true';
+    modeButton.innerHTML = ' DarkMode';
+    inputEl.style.backgroundColor = '#1f2123';
+    document.body.style.backgroundColor = 'rgb(31, 33, 35)';
+    document.body.style.color = 'white';
+    model.setState('light', false);
+    model.setState('dark', true);
+  }
+};
+
+modeButton.addEventListener('click', changeMode);
+
 const init = () => {
+  if (model.state.mode.dark) {
+    document.body.classList.add('text-white');
+    document.body.style.backgroundColor = 'rgb(31, 33, 35)';
+    logoEl.src =
+      'https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/logoDark.png?raw=true';
+    modeButton.innerHTML = ' DarkMode';
+    inputEl.style.backgroundColor = '#1f2123';
+  } else {
+    logoEl.src =
+      'https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/logoLight.png?raw=true';
+    modeButton.innerHTML = 'LightMode';
+    inputEl.style.backgroundColor = 'white';
+    document.body.classList.add('bg-white', 'text-black');
+    document.body.classList.remove('text-white');
+  }
   model.getRecipes().then(response => {
     let temp = response.map((recipe, id) => ({ ...recipe, id: id }));
     temp.forEach(data => {

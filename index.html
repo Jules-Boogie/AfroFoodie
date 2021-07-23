@@ -29,7 +29,7 @@
     <header class="header mb-12 px-4 flex justify-between items-center">
       <div class="relative h-32">
         <a href="index.html">
-          <img class="h-32" src="./src/img/logoDark.png" alt="Logo" />
+          <img class="logo h-32" src="./src/img/logoDark.png" alt="Logo" />
         </a>
       </div>
 
@@ -38,14 +38,13 @@
         <button
           id="search-btn"
           class="
-            hover:bg-red-600
+            hover:bg-gray-600
             focus:outline-none
             btn
             ml-8
             w-12
             h-full
             rounded-full
-            text-white
           "
         >
           <i class="fas fa-search"></i>
@@ -55,9 +54,9 @@
         <ul class="nav__list flex">
           <div class="relative h-10 rounded-full py-2 px-4 hover:shadow-lg">
             <button
-              class="focus:outline-none text-md font-semibold text-shadow"
+              class="mode focus:outline-none text-md font-semibold text-shadow"
             >
-              Add recipe
+              DarkMode
             </button>
           </div>
           <div
@@ -84,236 +83,7 @@
       </nav>
     </header>
 
-    <div class="bodyody h-full w-full text-white">
-      <div id="saved-recipes" class="hidden px-12">
-        <h2 class="text-2xl font-bold">My Saved Recipes</h2>
-        <div
-          class="bg-image w-full flex justify-around items-center gap-3 py-5"
-        >
-          <div
-            class="
-              backdrop
-              w-10/12
-              md:w-1/4
-              hover:bg-transparent
-              bg-white bg-opacity-10
-              rounded
-              p-3
-              text-white
-              border border-gray-300
-              shadow-lg
-            "
-          >
-            <!-- header -->
-            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
-              <h3 class="text-xl font-semibold text-shadow">Beyonce</h3>
-              <button
-                id="search__btn"
-                class="
-                  focus:outline-none
-                  btn
-                  ml-8
-                  w-12
-                  h-full
-                  rounded-full
-                  text-white
-                "
-              >
-                <i class="hover:text-red-600 far fa-heart"></i>
-              </button>
-            </div>
-            <!-- body -->
-            <div>
-              <img
-                src="https://i.postimg.cc/SxLx0fHV/bg01.jpg"
-                alt="image1"
-                class="w-full h-48 object-cover mb-2"
-              />
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                <i class="text-red-600 fas fa-star"></i>
-                <span> 5.0 (202) </span>
-                <span> Country Name </span>
-              </p>
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                Recipe Title <span> Preparation Time</span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              backdrop
-              w-10/12
-              md:w-1/4
-              hover:bg-transparent
-              cursor-pointer
-              bg-white bg-opacity-10
-              rounded
-              text-white
-              border border-gray-300
-              shadow-lg
-            "
-          >
-            <!-- header -->
-            <div class="w-full mb-3 p-3 flex justify-between border-gray-300">
-              <div class="flex items-center">
-                <img
-                  class="
-                    object-cover
-                    w-10
-                    h-10
-                    rounded-full
-                    border-2 border-gray-300
-                  "
-                  src="https://ichef.bbci.co.uk/news/976/cpsprodpb/1AEE/production/_102849860_420dd9fd-ed9c-4c75-b1fa-67d276834c01.jpg"
-                />
-                <h3
-                  class="
-                    ml-2
-                    hover:underline
-                    cursor-pointer
-                    text-sm
-                    font-semibold
-                    text-shadow
-                  "
-                >
-                  Yewande
-                </h3>
-              </div>
-              <div class="flex items-center">
-                <button
-                  id="search__btn"
-                  class="
-                    focus:outline-none
-                    btn
-                    ml-8
-                    w-12
-                    h-full
-                    rounded-full
-                    text-white
-                  "
-                >
-                  <i class="hover:text-red-600 far fa-heart"></i>
-                </button>
-              </div>
-            </div>
-            <!-- body -->
-
-            <img
-              src="https://i0.wp.com/biscuitsandladles.com/wp-content/uploads/2017/06/beef-jollof.jpg?ssl=1"
-              alt="image1"
-              class="w-full h-48 object-cover mb-2"
-            />
-            <div class="p-3">
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                <i class="text-red-600 fas fa-star"></i>
-                <span> 5.0 &middot; (202) &middot; </span>
-                <span> Nigeria </span>
-              </p>
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                Jollof Rice &middot;<span> 1hr 30mins</span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              backdrop
-              w-10/12
-              md:w-1/4
-              hover:bg-transparent
-              bg-white bg-opacity-10
-              rounded
-              p-3
-              text-white
-              border border-gray-300
-              shadow-lg
-            "
-          >
-            <!-- header -->
-            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
-              <h3 class="text-xl font-semibold text-shadow">Author</h3>
-              <button
-                id="search__btn"
-                class="
-                  focus:outline-none
-                  btn
-                  ml-8
-                  w-12
-                  h-full
-                  rounded-full
-                  text-white
-                "
-              >
-                <i class="hover:text-red-600 far fa-heart"></i>
-              </button>
-            </div>
-            <!-- body -->
-            <div>
-              <img
-                src="https://i.postimg.cc/SxLx0fHV/bg01.jpg"
-                alt="image1"
-                class="w-full h-48 object-cover mb-2"
-              />
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                <i class="text-red-600 fas fa-star"></i>
-                <span> 5.0 (202) </span>
-                <span> Country Name </span>
-              </p>
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                Recipe Title <span> Preparation Time</span>
-              </p>
-            </div>
-          </div>
-          <div
-            class="
-              backdrop
-              w-10/12
-              md:w-1/4
-              hover:bg-transparent
-              bg-white bg-opacity-10
-              rounded
-              p-3
-              text-white
-              border border-gray-300
-              shadow-lg
-            "
-          >
-            <!-- header -->
-            <div class="w-full mb-3 pb-3 flex justify-between border-gray-300">
-              <h3 class="text-xl font-semibold text-shadow">Author</h3>
-              <button
-                id="search__btn"
-                class="
-                  focus:outline-none
-                  btn
-                  ml-8
-                  w-12
-                  h-full
-                  rounded-full
-                  text-white
-                "
-              >
-                <i class="hover:text-red-600 far fa-heart"></i>
-              </button>
-            </div>
-            <!-- body -->
-            <div>
-              <img
-                src="https://i.postimg.cc/SxLx0fHV/bg01.jpg"
-                alt="image1"
-                class="w-full h-48 object-cover mb-2"
-              />
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                <i class="text-red-600 fas fa-star"></i>
-                <span> 5.0 (202) </span>
-                <span> Country Name </span>
-              </p>
-              <p class="mb-3 tracking-wide text-base text-shadow">
-                Recipe Title <span> Preparation Time</span>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="bodyody h-full w-full">
       <div id="by-regions" class="mb-12 px-4">
         <h2 class="text-2xl font-bold flex justify-center">
           Recipes by Regions
@@ -349,7 +119,7 @@
         <!-- <i class="fas fa-arrow-circle-right"></i> -->
       </div>
 
-      <div id="recipes-result" class="px-4">
+      <div id="recipes-result" class="mb-12 px-4">
         <h2
           id="all-results-title"
           class="capitalize text-2xl font-bold flex justify-center"
@@ -359,16 +129,9 @@
 
         <div
           id="all-results"
-          class="
-            bg-image
-            w-full
-            flex flex-wrap
-            justify-center
-            flex-grow-0
-            items-center
-            gap-3
-            py-5
-          "
+          class=
+          "bg-image w-full flex justify-center items-center gap-3 py-5"
+          
         ></div>
         <div class="text-center">
           <button

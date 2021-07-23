@@ -1,8 +1,7 @@
 input:focus {
   outline: none;
- 
 }
-input{
+input {
   background-color: #1f2123;
 }
 
@@ -28,7 +27,8 @@ input{
 body {
   font-family: 'Lobster Two', cursive;
   background: rgb(31, 33, 35);
-  color:#fff
+  color: #fff;
+
 }
 
 .slider {

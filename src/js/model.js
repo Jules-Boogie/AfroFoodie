@@ -20,6 +20,24 @@ export const state = {
   region: data.region,
   diet: data.diet,
   bookmarks: [],
+  mode: {
+    light: false,
+    dark: true,
+  },
+};
+
+export const setState = (mode, value) => {
+  state.mode[mode] = value;
+  localStorage.setItem('mode', JSON.stringify(state.mode));
+};
+
+const retrieveMode = () => {
+  const mode = localStorage.getItem('mode');
+  if (mode) {
+    state.mode = JSON.parse(mode);
+  } else {
+    localStorage.setItem('mode', JSON.stringify(state.mode));
+  }
 };
 
 const storeBookmark = () => {
@@ -47,6 +65,7 @@ export const deleteBookmarks = recipeId => {
 
 const init = () => {
   retrieveBookmark();
+  retrieveMode();
 };
 
 init();
