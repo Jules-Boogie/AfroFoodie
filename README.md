@@ -1,12 +1,12 @@
 # AfroFoodie
- An offline application to stores and use recipes. 
 
+An offline application to stores and use recipes.
 
 ### App Gif(Search Feature)
+
 <img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/AfroFoodie__%20Search%20for%20Afro%20Inspired%20recipes.gif"  width="100%" >
 
-
-###  App Photo (Dark Mode)
+### App Photo (Dark Mode)
 
 <img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/darkmode.PNG"  width="100%" >
 
@@ -14,8 +14,7 @@
 
 <img src="https://github.com/Jules-Boogie/AfroFoodie/blob/main/src/img/fooddetail.PNG" width="100%">
 
-
-### Code Snippet 
+### Code Snippet
 
 ```
 // Bookmarking a recipe
@@ -23,18 +22,31 @@
 
 // controller/view
 contentDiv.addEventListener('click', function (e) {
-  try{
-    let recipe = model.state.recipes[e.target.dataset.id];
-    model.addBookmarks(recipe)
-    e.target.classList.toggle('cursor-not-allowed bg-red-500');
-  }catch(err){
-    console.log(err)
-  }finally{
-    console.log(model.state.bookmarks)
+  if (e.target.classList.contains('save-btn')) {
+    try {
+      let recipe = model.state.recipes[e.target.dataset.id];
+      if (e.target.classList.contains('far')) {
+        model.addBookmarks(recipe);
+        e.target.classList.remove('far');
+        e.target.classList.add('cursor-not-allowed', 'fas', 'text-red-600');
+      }
+      if (e.target.classList.contains('fas')) {
+        model.deleteBookmarks(recipe.id);
+        e.target.classList.remove('fas', 'cursor-not-allowed', 'text-red-600');
+        e.target.classList.add('far');
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      console.log(model.state.bookmarks);
+    }
   }
 });
 
+
 // model
+import data from '../data/data';
+
 export const state = {
   recipes: data.recipes.map((recipe, id) => ({ ...recipe, id: id })),
   region: data.region,
@@ -44,9 +56,14 @@ export const state = {
 
 export const addBookmarks = recipe => {
   state.bookmarks.push(recipe);
-  state.recipes.forEach(rec => {
-    if (rec.id === recipe.id) rec[bookmarked] = true;
-  });
+  state.recipes[recipe.id].bookmarked = true;
 };
+
+
+export const deleteBookmarks = recipeId => {
+  const id = state.bookmarks.findIndex(recipe => recipe.id == recipeId)
+  state.bookmarks.splice(id,1)
+  state.recipes[id].bookmarked = false
+}
 
 ```

@@ -1,5 +1,16 @@
 import * as model from './model';
 import * as config from './config';
+// Firebase App (the core Firebase SDK) is always required and must be listed first
+import firebase from 'firebase/app';
+// If you are using v7 or any earlier version of the JS SDK, you should import firebase using namespace import
+// import * as firebase from "firebase/app"
+
+// If you enabled Analytics in your project, add the Firebase SDK for Analytics
+import 'firebase/analytics';
+
+// Add the Firebase products that you want to use
+import 'firebase/auth';
+import 'firebase/firestore';
 
 const recipeContainer = document.querySelector('#all-results');
 const topRatedContainer = document.querySelector('#top-rated');
@@ -13,26 +24,31 @@ const regionsContainer = document.querySelector('#by-regions');
 const regionsDiv = document.querySelector('#recipes-region__div');
 const dietDiv = document.querySelector('#diet__div');
 const loadButton = document.querySelector('#load-more');
+const bookmarksButton = document.querySelector('#my-recipes');
 const contentDiv = document.querySelector('.bodyody');
+
+firebase.initializeApp(config.firebaseConfig);
 
 let currentPage = 1;
 
-const getPageData = page => {
+const getPageData = (data, page) => {
   let start = (page - 1) * config.PAGE_NUMBER_COUNT;
   let end = page * config.PAGE_NUMBER_COUNT;
 
   if (end >= model.state.recipes.length) loadButton.classList.add('hidden');
-  return model.state.recipes.slice(start, end);
+  return data.slice(start, end);
 };
 
 const changePage = () => {
   currentPage++;
-  renderingAllRecipes(
-    recipeContainer,
-    getPageData(currentPage),
-    '-all',
-    'beforeend'
-  );
+  model.getRecipes().then(response => {
+    renderingAllRecipes(
+      recipeContainer,
+      getPageData(response, currentPage),
+      '-all',
+      'beforeend'
+    );
+  });
 };
 
 loadButton.addEventListener('click', changePage);
@@ -40,7 +56,6 @@ loadButton.addEventListener('click', changePage);
 const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
   data.forEach((recipe, index) => {
     const markup = ` <div id=recipe data-id=${index} class="slide${type} mr-4 backdrop w-10/12 md:w-1/4 hover:bg-transparent  bg-white bg-opacity-10 rounded  text-white border border-gray-300 shadow-lg">
-   
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
       <div data-id=${recipe.id} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${
@@ -53,15 +68,20 @@ const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
       </div>
       <div class="flex items-center">
        
-          <i data-id=${recipe.id} class="hover:text-red-600 far fa-heart ${recipe.bookmarked ? 'cursor-not-allowed bg-red-500': ''}" ></i>
+          <i data-id=${
+            recipe.id
+          } class="save-btn hover:text-red-600 cursor-pointer fa-heart ${
+      recipe.bookmarked ? 'fas text-red-600' : 'far'
+    }" ></i>
       
       </div>
      
     </div>
-    <a href="/detail.html#${recipe.id}">
+    <a href="detail.html#${recipe.id}">
       <img src=${
         recipe.images[0]
       } alt="image1" class="w-full cursor-pointer h-48 object-cover mb-2">
+      </a>
       <div class="p-3">
       <p class="mb-3 tracking-wide text-base text-shadow">
         <i class=" text-red-600 fas fa-star"></i>
@@ -76,21 +96,20 @@ const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
     }hr ${recipe.time.split(':')[1]}mins</span>
       </p>
     </div>
-    </a>
+   
   </div>`;
     location.insertAdjacentHTML(position, markup);
   });
 };
-//render all recipes
-renderingAllRecipes(recipeContainer, getPageData(currentPage), '-all');
 
 //render top rated recipes
-const topRatedResults = model.state.recipes
-  .filter(recipe => recipe.ratingsAverage >= 4)
-  .sort((a, b) => b.ratingsQuantity - a.ratingsQuantity)
-  .slice(0, 3)
-  .reverse();
-renderingAllRecipes(topRatedContainer, topRatedResults, '-top');
+const topRatedReturn = data => {
+  return (topRatedResults = data
+    .filter(recipe => recipe.ratingsAverage >= 4)
+    .sort((a, b) => b.ratingsQuantity - a.ratingsQuantity)
+    .slice(0, 3)
+    .reverse());
+};
 
 //search algorithm
 const search = e => {
@@ -100,6 +119,7 @@ const search = e => {
     recipe.ingredients.join().includes(searchTerm)
   );
   topRatedDiv.classList.add('hidden');
+  loadButton.classList.add('hidden');
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
@@ -112,11 +132,11 @@ const search = e => {
 
 const filter = e => {
   e.preventDefault();
-  console.log(e.target.dataset.id);
   const filterResult = model.state.recipes.filter(recipe =>
     recipe.tags.includes(e.target.dataset.id)
   );
   topRatedDiv.classList.add('hidden');
+  loadButton.classList.add('hidden');
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
@@ -152,7 +172,7 @@ const renderTags = (data, location, type) => {
                     border border-gray-300
                     shadow-lg
                     cursor-pointer
-                    mr-4
+                    m-4
                   "
                 >
                   <a>
@@ -173,24 +193,54 @@ const renderTags = (data, location, type) => {
 renderTags(model.state.region.slice(0, 4), regionsDiv, '-region');
 renderTags(model.state.diet.slice(0, 4), dietDiv, '-diet');
 
-const addBookmarksController = e => {
-  //;
-  //update recipe view
-  e.preventDefault();
-  alert('click');
-  //
-  // update state
-  //;
-};
-
 contentDiv.addEventListener('click', function (e) {
-  try{
-    let recipe = model.state.recipes[e.target.dataset.id];
-    model.addBookmarks(recipe)
-    e.target.classList.toggle('cursor-not-allowed bg-red-500');
-  }catch(err){
-    console.log(err)
-  }finally{
-    console.log(model.state.bookmarks)
+  // e.preventDefault();
+  if (e.target.classList.contains('save-btn')) {
+    try {
+      let recipe = model.state.recipes[e.target.dataset.id];
+      if (e.target.classList.contains('fa-w-16')) {
+        model.addBookmarks(recipe);
+        e.target.classList.remove('far');
+        e.target.classList.add('cursor-not-allowed', 'fas', 'text-red-600');
+      } else {
+        model.deleteBookmarks(recipe.id);
+        e.target.classList.remove('fas', 'cursor-not-allowed', 'text-red-600');
+        e.target.classList.add('far');
+      }
+    } catch (err) {
+      console.log(err);
+    } finally {
+      console.log(model.state.bookmarks);
+    }
   }
 });
+
+bookmarksButton.addEventListener('click', function (e) {
+  e.preventDefault();
+  topRatedDiv.classList.add('hidden');
+  loadButton.classList.add('hidden');
+  regionsContainer.classList.add('hidden');
+  dietContainer.classList.add('hidden');
+  recipeContainer.innerHTML = '';
+  allResultsTitle.innerHTML = `Your Recipes`;
+  renderingAllRecipes(recipeContainer, model.state.bookmarks);
+});
+
+const init = () => {
+  model.getRecipes().then(response => {
+    let temp = response.map((recipe, id) => ({ ...recipe, id: id }));
+    temp.forEach(data => {
+      if (model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
+        data.bookmarked = true;
+      }
+    });
+    model.state.recipes = temp;
+    renderingAllRecipes(
+      recipeContainer,
+      getPageData(temp, currentPage),
+      '-all'
+    );
+    renderingAllRecipes(topRatedContainer, topRatedReturn(temp), '-top');
+  });
+};
+init();

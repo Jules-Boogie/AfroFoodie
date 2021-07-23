@@ -24,10 +24,11 @@
   </head>
   <body>
     <div class="main"></div>
-    <script defer>
+    <script async>
       import * as model from './src/js/model.js';
-
       const main = document.querySelector('.main');
+      let currentRecipe;
+      model.getRecipes().then(response => {
       function showRecipe() {
         const id = window.location.hash.slice(1);
         const currentRecipe = model.state.recipes[id];
@@ -106,14 +107,17 @@
         `;
 
         main.insertAdjacentHTML('afterbegin', markup);
+ 
       }
       showRecipe();
       let currentSlide = 0;
+
       const slides = document.querySelectorAll('.slide');
       const slider = document.querySelector('.slider');
       const slide = document.querySelector("#recipe-image");
-
-       slider.style.overflow = 'hidden';
+      console.log(slider)
+      console.log(slides)
+      slider.style.overflow = 'hidden';
       const maxSlide = slides.length;
       const goToSlide = slide => {
         slides.forEach(
@@ -141,6 +145,7 @@
       setInterval(() => {
         nextSlide();
       }, 5000);
+    })
     </script>
   </body>
 </html>
