@@ -2,6 +2,8 @@
 
 An offline application to store and use recipes.
 
+## Deployed Link
+https://learning-68ad4.web.app/
 
 ## Technologies Used
 | Technologies | Description  |
