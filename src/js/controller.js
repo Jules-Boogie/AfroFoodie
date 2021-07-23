@@ -121,11 +121,11 @@ const topRatedReturn = data => {
     .reverse());
 };
 
-//search algorithm
+//search
 const search = e => {
   e.preventDefault();
   const searchTerm = formEl.search.value;
-  const searchResult = model.recipes.filter(recipe =>
+  const searchResult = model.state.recipes.filter(recipe =>
     recipe.ingredients.join().includes(searchTerm)
   );
   topRatedDiv.classList.add('hidden');
@@ -133,11 +133,11 @@ const search = e => {
   regionsContainer.classList.add('hidden');
   dietContainer.classList.add('hidden');
   recipeContainer.innerHTML = '';
-  allResultsTitle.innerHTML = `${searchTerm}`;
+  allResultsTitle.innerHTML = `${searchTerm} Recipes`;
   if (searchResult.length < 4) {
     loadBtn.classList.add('hidden');
   }
-  renderingAllRecipes(recipeContainer, searchResult.slice(0, 3), '-search');
+  renderingAllRecipes(recipeContainer, searchResult.slice(0, 4), '-search');
 };
 
 const filter = e => {
