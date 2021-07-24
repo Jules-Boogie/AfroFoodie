@@ -1,4 +1,4 @@
-export const PAGE_NUMBER_COUNT = 4;
+export const PAGE_NUMBER_COUNT = 3;
 export const firebaseConfig = {
     apiKey: "AIzaSyBqUi_A-__fwHNyFzk06druuZLV298_S6E",
     authDomain: "learning-68ad4.firebaseapp.com",

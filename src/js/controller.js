@@ -65,7 +65,7 @@ loadButton.addEventListener('click', changePage);
 
 const renderingAllRecipes = (location, data, type, position = 'afterbegin') => {
   data.forEach((recipe, index) => {
-    const markup = ` <div id=recipe data-id=${index} class="slide${type} m-2 backdrop w-10/12 md:w-1/4 hover:bg-transparent  bg-white bg-opacity-10 rounded border border-gray-300 shadow-lg">
+    const markup = ` <div id=recipe data-id=${index} class="slide${type} m-2 backdrop w-3/4 md:w-1/4 hover:bg-transparent  bg-white bg-opacity-10 rounded border border-gray-300 shadow-lg">
     <div class="w-full mb-3 p-3  flex justify-between border-gray-300">
       <div data-id=${recipe.id} class="flex items-center">
         <img class="object-cover w-10 h-10 rounded-full border-2 border-gray-300" src=${
