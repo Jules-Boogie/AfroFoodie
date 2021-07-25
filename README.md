@@ -3,7 +3,7 @@
 An offline application to store and use recipes.
 
 ## Deployed Link
-https://learning-68ad4.web.app/
+https://learning-68ad4.firebaseapp.com/
 
 ## Technologies Used
 | Technologies | Description  |
