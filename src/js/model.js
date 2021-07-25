@@ -8,11 +8,10 @@ export const getRecipes = async () => {
     const data1 = await response.json();
     if (!response.ok)
       throw new Error('call to the database was not successful');
-
-    return data1;
+    return data1
   } catch (err) {
     console.log(err);
-  }
+  } 
 };
 
 export const state = {

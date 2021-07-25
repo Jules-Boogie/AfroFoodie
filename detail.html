@@ -26,6 +26,7 @@
     <div class="main"></div>
     <script async>
       import * as model from './src/js/model.js';
+      import data from './src/data/data.js';
       const main = document.querySelector('.main');
       if (model.state.mode.dark) {
         document.body.classList.add('text-white');
@@ -34,11 +35,17 @@
         document.body.classList.add('bg-white','text-black')
         document.body.classList.remove('text-white');
       }
+      
       let currentRecipe;
       model.getRecipes().then(response => {
         function showRecipe() {
           const id = window.location.hash.slice(1);
-          const currentRecipe = response[id];
+          let currentRecipe; 
+          if(!response){
+            currentRecipe = data.recipes[id]
+          }else{
+            currentRecipe = response[id]
+          }
           const markup = `
         <div class="flex flex-wrap md items-center">
         <div class="w-full md:w-1/2 h-full">

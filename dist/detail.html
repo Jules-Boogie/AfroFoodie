@@ -454,6 +454,9 @@ id) /*: string*/
 
 },{}],"7EK2D":[function(require,module,exports) {
 var _srcJsModelJs = require('./src/js/model.js');
+var _srcDataDataJs = require('./src/data/data.js');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _srcDataDataJsDefault = _parcelHelpers.interopDefault(_srcDataDataJs);
 const main = document.querySelector('.main');
 if (_srcJsModelJs.state.mode.dark) {
   document.body.classList.add('text-white');
@@ -466,7 +469,12 @@ let currentRecipe;
 _srcJsModelJs.getRecipes().then(response => {
   function showRecipe() {
     const id = window.location.hash.slice(1);
-    const currentRecipe = response[id];
+    let currentRecipe;
+    if (!response) {
+      currentRecipe = _srcDataDataJsDefault.default.recipes[id];
+    } else {
+      currentRecipe = response[id];
+    }
     const markup = `
         <div class="flex flex-wrap md items-center">
         <div class="w-full md:w-1/2 h-full">
@@ -563,7 +571,7 @@ _srcJsModelJs.getRecipes().then(response => {
   }, 5000);
 });
 
-},{"./src/js/model.js":"1hp6y"}],"1hp6y":[function(require,module,exports) {
+},{"./src/js/model.js":"1hp6y","./src/data/data.js":"3X9FW","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1hp6y":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "getRecipes", function () {
@@ -2321,6 +2329,9 @@ id) /*: string*/
 
 },{}],"7EK2D":[function(require,module,exports) {
 var _srcJsModelJs = require('./src/js/model.js');
+var _srcDataDataJs = require('./src/data/data.js');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _srcDataDataJsDefault = _parcelHelpers.interopDefault(_srcDataDataJs);
 const main = document.querySelector('.main');
 if (_srcJsModelJs.state.mode.dark) {
   document.body.classList.add('text-white');
@@ -2333,7 +2344,12 @@ let currentRecipe;
 _srcJsModelJs.getRecipes().then(response => {
   function showRecipe() {
     const id = window.location.hash.slice(1);
-    const currentRecipe = response[id];
+    let currentRecipe;
+    if (!response) {
+      currentRecipe = _srcDataDataJsDefault.default.recipes[id];
+    } else {
+      currentRecipe = response[id];
+    }
     const markup = `
         <div class="flex flex-wrap md items-center">
         <div class="w-full md:w-1/2 h-full">
@@ -2430,7 +2446,7 @@ _srcJsModelJs.getRecipes().then(response => {
   }, 5000);
 });
 
-},{"./src/js/model.js":"1hp6y"}],"1hp6y":[function(require,module,exports) {
+},{"./src/js/model.js":"1hp6y","./src/data/data.js":"3X9FW","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"1hp6y":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "getRecipes", function () {

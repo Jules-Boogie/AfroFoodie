@@ -1,0 +1,78 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+_parcelHelpers.export(exports, "getRecipes", function () {
+  return getRecipes;
+});
+_parcelHelpers.export(exports, "state", function () {
+  return state;
+});
+_parcelHelpers.export(exports, "setState", function () {
+  return setState;
+});
+_parcelHelpers.export(exports, "addBookmarks", function () {
+  return addBookmarks;
+});
+_parcelHelpers.export(exports, "deleteBookmarks", function () {
+  return deleteBookmarks;
+});
+var _dataData = require('../data/data');
+var _dataDataDefault = _parcelHelpers.interopDefault(_dataData);
+const getRecipes = async () => {
+  try {
+    const response = await fetch('https://learning-68ad4-default-rtdb.firebaseio.com/0.json');
+    const data1 = await response.json();
+    if (!response.ok) throw new Error('call to the database was not successful');
+    return data1;
+  } catch (err) {
+    console.log(err);
+  }
+};
+const state = {
+  recipes: [],
+  region: _dataDataDefault.default.region,
+  diet: _dataDataDefault.default.diet,
+  bookmarks: [],
+  mode: {
+    light: false,
+    dark: true
+  }
+};
+const setState = (mode, value) => {
+  state.mode[mode] = value;
+  localStorage.setItem('mode', JSON.stringify(state.mode));
+};
+const retrieveMode = () => {
+  const mode = localStorage.getItem('mode');
+  if (mode) {
+    state.mode = JSON.parse(mode);
+  } else {
+    localStorage.setItem('mode', JSON.stringify(state.mode));
+  }
+};
+const storeBookmark = () => {
+  localStorage.setItem('bookmark', JSON.stringify(state.bookmarks));
+};
+const retrieveBookmark = () => {
+  const bookmark = localStorage.getItem('bookmark');
+  if (bookmark) state.bookmarks = JSON.parse(bookmark);
+};
+const addBookmarks = recipe => {
+  recipe = {
+    ...recipe,
+    bookmarked: true
+  };
+  state.bookmarks.push(recipe);
+  state.recipes[recipe.id].bookmarked = true;
+  storeBookmark();
+};
+const deleteBookmarks = recipeId => {
+  const id = state.bookmarks.findIndex(recipe => recipe.id == recipeId);
+  state.bookmarks.splice(id, 1);
+  state.recipes[id].bookmarked = false;
+  storeBookmark();
+};
+const init = () => {
+  retrieveBookmark();
+  retrieveMode();
+};
+init();

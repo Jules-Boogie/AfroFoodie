@@ -1,5 +1,6 @@
 import * as model from './model';
 import * as config from './config';
+import data from '../data/data';
 
 // Firebase App (the core Firebase SDK) is always required and must be listed first
 import firebase from 'firebase/app';
@@ -43,18 +44,30 @@ const getPageData = (data, page) => {
   return data.slice(start, end);
 };
 
+const setData =(response)=> {
+  let temp;
+
+  if(!response){
+    temp = data.recipes.map((recipe, id) => ({ ...recipe, id: id })) ;
+  }else {
+    temp = response.map((recipe, id) => ({ ...recipe, id: id }));
+  }
+  
+  temp.forEach(data => {
+    if (model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
+      data.bookmarked = true;
+    }
+  });
+  return temp
+}
+
+
 const changePage = () => {
   currentPage++;
   model.getRecipes().then(response => {
-    let temp = response.map((recipe, id) => ({ ...recipe, id: id }));
-    temp.forEach(data => {
-      if (model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
-        data.bookmarked = true;
-      }
-    });
     renderingAllRecipes(
       recipeContainer,
-      getPageData(temp, currentPage),
+      getPageData(setData(response), currentPage),
       '-all',
       'beforeend'
     );
@@ -278,20 +291,15 @@ const init = () => {
     document.body.classList.add('bg-white', 'text-black');
     document.body.classList.remove('text-white');
   }
+  
   model.getRecipes().then(response => {
-    let temp = response.map((recipe, id) => ({ ...recipe, id: id }));
-    temp.forEach(data => {
-      if (model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
-        data.bookmarked = true;
-      }
-    });
-    model.state.recipes = temp;
+    model.state.recipes = setData(response);
     renderingAllRecipes(
       recipeContainer,
-      getPageData(temp, currentPage),
+      getPageData(model.state.recipes, currentPage),
       '-all'
     );
-    renderingAllRecipes(topRatedContainer, topRatedReturn(temp), '-top');
+    renderingAllRecipes(topRatedContainer, topRatedReturn(model.state.recipes), '-top');
   });
 };
 init();

@@ -444,8 +444,10 @@ id) /*: string*/
 },{}],"3miIZ":[function(require,module,exports) {
 var _model = require('./model');
 var _config = require('./config');
-var _firebaseApp = require('firebase/app');
+var _dataData = require('../data/data');
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _dataDataDefault = _parcelHelpers.interopDefault(_dataData);
+var _firebaseApp = require('firebase/app');
 var _firebaseAppDefault = _parcelHelpers.interopDefault(_firebaseApp);
 require('firebase/analytics');
 require('firebase/auth');
@@ -475,19 +477,30 @@ const getPageData = (data, page) => {
   if (end >= _model.state.recipes.length) loadButton.classList.add('hidden');
   return data.slice(start, end);
 };
-const changePage = () => {
-  currentPage++;
-  _model.getRecipes().then(response => {
-    let temp = response.map((recipe, id) => ({
+const setData = response => {
+  let temp;
+  if (!response) {
+    temp = _dataDataDefault.default.recipes.map((recipe, id) => ({
       ...recipe,
       id: id
     }));
-    temp.forEach(data => {
-      if (_model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
-        data.bookmarked = true;
-      }
-    });
-    renderingAllRecipes(recipeContainer, getPageData(temp, currentPage), '-all', 'beforeend');
+  } else {
+    temp = response.map((recipe, id) => ({
+      ...recipe,
+      id: id
+    }));
+  }
+  temp.forEach(data => {
+    if (_model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
+      data.bookmarked = true;
+    }
+  });
+  return temp;
+};
+const changePage = () => {
+  currentPage++;
+  _model.getRecipes().then(response => {
+    renderingAllRecipes(recipeContainer, getPageData(setData(response), currentPage), '-all', 'beforeend');
   });
 };
 loadButton.addEventListener('click', changePage);
@@ -667,23 +680,14 @@ const init = () => {
     document.body.classList.remove('text-white');
   }
   _model.getRecipes().then(response => {
-    let temp = response.map((recipe, id) => ({
-      ...recipe,
-      id: id
-    }));
-    temp.forEach(data => {
-      if (_model.state.bookmarks.some(bookmark => bookmark.id === data.id)) {
-        data.bookmarked = true;
-      }
-    });
-    _model.state.recipes = temp;
-    renderingAllRecipes(recipeContainer, getPageData(temp, currentPage), '-all');
-    renderingAllRecipes(topRatedContainer, topRatedReturn(temp), '-top');
+    _model.state.recipes = setData(response);
+    renderingAllRecipes(recipeContainer, getPageData(_model.state.recipes, currentPage), '-all');
+    renderingAllRecipes(topRatedContainer, topRatedReturn(_model.state.recipes), '-top');
   });
 };
 init();
 
-},{"./model":"1hp6y","./config":"6pr2F","firebase/app":"6wFrx","firebase/analytics":"1kNAc","firebase/auth":"3rqrX","firebase/firestore":"5Eq2v","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6pr2F":[function(require,module,exports) {
+},{"./model":"1hp6y","./config":"6pr2F","../data/data":"3X9FW","firebase/app":"6wFrx","firebase/analytics":"1kNAc","firebase/auth":"3rqrX","firebase/firestore":"5Eq2v","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"6pr2F":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 _parcelHelpers.export(exports, "PAGE_NUMBER_COUNT", function () {
