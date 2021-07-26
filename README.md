@@ -1,6 +1,6 @@
 # AfroFoodie
 
-An offline application to store and use recipes.
+An application to store and use recipes.
 
 ## Deployed Link
 https://learning-68ad4.firebaseapp.com/
